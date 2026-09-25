@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elevadores para carros y estacionamiento vertical | Grupo DYS</title>
 <meta name="description" content="Fabricación de elevadores para carros en México: duplicadores de estacionamiento, estacionamiento vertical automatizado, torres de estacionamiento, montacoches, rampas hidráulicas y elevadores para taller mecánico.">
-<meta name="theme-color" content="#0B1644">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="canonical" href="https://grupodys.com/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
@@ -29,13 +29,15 @@
    Registro: usted. Mercado: México.
    ============================================================ */
 :root{
-  color-scheme:dark;
+  color-scheme:light;
   --d-900:#060C2E; --d-800:#080F39; --d-700:#0B1644; --d-600:#101E52; --d-500:#16255E;
   --act:#C12318; --act-hi:#D92A1D;     /* acción, y nada más */
   --tec:#F2B01D;                        /* dato técnico, y nada más */
-  --ink:#FFFFFF; --ink-2:#C3CEE8; --ink-3:#8E9CC4; --ink-4:#5D6B96;
-  --rule:rgba(142,156,196,.22); --rule-2:rgba(142,156,196,.38);
-  --paper:#EEF1F7;
+  /* superficie clara por defecto; la escala navy de arriba queda para .inv */
+  --page:#FFFFFF; --page-2:#F5F6F8; --card:#FFFFFF;
+  --ink:#0B1644; --ink-2:#48547A; --ink-3:#6E7896; --ink-4:#98A1BA;
+  --rule:rgba(11,22,68,.13); --rule-2:rgba(11,22,68,.24);
+  --paper:#F1F3F8;
   --sign:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
   --text:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
   --data:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
@@ -43,7 +45,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 8px);-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--d-700);color:var(--ink);font-family:var(--text);
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--text);
   font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.04;text-wrap:balance}
@@ -122,24 +124,24 @@ ul{margin:0;padding:0;list-style:none}
   letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 
 /* ---------- ritmo ---------- */
-section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
+section{padding-block:clamp(2.1rem,4vw,3.1rem);border-top:1px solid var(--rule)}
 .deep{background:var(--d-800)}
 .deepest{background:var(--d-900)}
-.head{max-width:66ch;margin-bottom:clamp(1.9rem,4vw,2.8rem);display:grid;gap:.9rem}
+.head{max-width:64ch;margin-bottom:clamp(1.1rem,2.2vw,1.6rem);display:grid;gap:.6rem}
 .head h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.85rem)}
 
 /* ---------- panel de ficha ---------- */
-.sheet{position:relative;background:var(--paper);padding:20px;border-radius:2px}
-.sheet img{width:100%;aspect-ratio:16/10;object-fit:contain;mix-blend-mode:multiply}
+.sheet{position:relative;background:var(--paper);padding:15px;border-radius:2px}
+.sheet img{width:100%;aspect-ratio:16/9;object-fit:contain;mix-blend-mode:multiply}
 .sheet::before,.sheet::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--tec)}
 .sheet::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
 .sheet::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
 .sheet.photo img{mix-blend-mode:normal;aspect-ratio:16/9;object-fit:cover}
-.sheet figcaption{margin-top:14px;font-family:var(--data);font-size:.64rem;font-weight:500;
+.sheet figcaption{margin-top:10px;font-family:var(--data);font-size:.64rem;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4)}
 
 /* ---------- carrusel de tipos ---------- */
-.carousel{margin-top:clamp(1.6rem,4vw,2.4rem)}
+.carousel{margin-top:clamp(1.2rem,2.6vw,1.7rem)}
 .viewport{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
   scrollbar-width:none;-ms-overflow-style:none}
 .viewport::-webkit-scrollbar{display:none}
@@ -148,7 +150,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 .slide-txt h3{font-family:var(--sign);font-size:clamp(1.35rem,2.9vw,1.95rem);margin-block:.7rem .8rem}
 .slide-txt>p{color:var(--ink-2);font-size:.97rem}
 .usos{margin-top:1.4rem;border-top:1px solid var(--rule)}
-.usos div{padding-block:.8rem;border-bottom:1px solid var(--rule);display:grid;
+.usos div{padding-block:.62rem;border-bottom:1px solid var(--rule);display:grid;
   grid-template-columns:78px minmax(0,1fr);gap:1rem;align-items:baseline}
 .usos dt{margin:0;font-family:var(--data);font-size:.66rem;font-weight:600;letter-spacing:.15em;
   text-transform:uppercase;color:var(--tec)}
@@ -166,7 +168,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
   font-variant-numeric:tabular-nums;letter-spacing:.08em}
 
 /* ---------- destacado + variantes ---------- */
-.feat{display:grid;gap:clamp(1.5rem,4vw,2.8rem);
+.feat{display:grid;gap:clamp(1.3rem,3vw,2.2rem);
   grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center}
 .feat h3{font-family:var(--sign);font-size:clamp(1.3rem,2.7vw,1.75rem);margin-bottom:.7rem}
 .feat p{color:var(--ink-2);font-size:.97rem}
@@ -176,26 +178,30 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
   border-top:2px solid var(--rule-2);transition:border-color .16s}
 .var:hover{border-top-color:var(--tec)}
 .var-shot{margin:auto 0 0}
+.also{margin-top:1.3rem;padding-top:1.1rem;border-top:1px solid var(--rule);
+  color:var(--ink-3);font-size:.9rem;line-height:1.75}
+.also b{display:block;font-family:var(--data);font-size:.66rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--tec);margin-bottom:.35rem}
 .var h3{font-family:var(--sign);font-size:1.12rem}
 .var p{color:var(--ink-3);font-size:.89rem}
 .var .sheet{padding:13px}
 
 /* ---------- dirigido a ---------- */
-.who{margin-top:clamp(2rem,4vw,2.6rem);padding-top:1.6rem;border-top:1px solid var(--rule)}
+.who{margin-top:clamp(1.3rem,2.6vw,1.8rem);padding-top:1.2rem;border-top:1px solid var(--rule)}
 .who h4{font-family:var(--data);font-size:.7rem;font-weight:600;letter-spacing:.17em;
-  text-transform:uppercase;color:var(--tec);margin-bottom:1.1rem}
-.who ul{display:grid;gap:.7rem 1.6rem;grid-template-columns:repeat(auto-fit,minmax(min(215px,100%),1fr))}
-.who li{position:relative;padding-left:1.4rem;color:var(--ink-2);font-size:.92rem}
+  text-transform:uppercase;color:var(--tec);margin-bottom:.8rem}
+.who ul{display:grid;gap:.5rem 1.4rem;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}
+.who li{position:relative;padding-left:1.3rem;color:var(--ink-2);font-size:.89rem;line-height:1.5}
 .who li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;
   background:var(--ink-4);transform:rotate(45deg)}
 
 /* ---------- listas ---------- */
-.pts{display:grid;gap:.8rem;margin-top:1.5rem}
-.pts li{position:relative;padding-left:1.7rem;color:var(--ink-2);font-size:.95rem}
+.pts{display:grid;gap:.65rem;margin-top:1.1rem}
+.pts li{position:relative;padding-left:1.6rem;color:var(--ink-2);font-size:.93rem;line-height:1.55}
 .pts li::before{content:"";position:absolute;left:1px;top:.55em;width:8px;height:8px;
   background:var(--tec);transform:rotate(45deg)}
 .pts b{color:var(--ink);font-weight:600}
-.nos{display:grid;gap:.8rem;margin-top:1.5rem}
+.nos{display:grid;gap:.65rem;margin-top:1.1rem}
 .nos li{position:relative;padding-left:1.7rem;color:var(--ink-3);font-size:.95rem}
 .nos li::before{content:"\00d7";position:absolute;left:0;top:-.08em;color:var(--act-hi);
   font-size:1.3rem;font-weight:700}
@@ -206,8 +212,8 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 .no h3{color:var(--ink-4)}
 
 /* ---------- datos ---------- */
-.data{margin-top:1.7rem;border-top:1px solid var(--rule)}
-.data div{display:flex;justify-content:space-between;gap:1.4rem;padding-block:.78rem;
+.data{margin-top:1.2rem;border-top:1px solid var(--rule)}
+.data div{display:flex;justify-content:space-between;gap:1.4rem;padding-block:.6rem;
   border-bottom:1px solid var(--rule)}
 .data dt{margin:0;font-family:var(--data);font-size:.68rem;font-weight:500;letter-spacing:.15em;
   text-transform:uppercase;color:var(--ink-3)}
@@ -218,7 +224,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 .data.plain dd{color:var(--ink)}
 
 /* ---------- alzado ---------- */
-.draw{margin-top:clamp(1.6rem,4vw,2.4rem);overflow-x:auto}
+.draw{margin-top:clamp(1.2rem,2.6vw,1.7rem);overflow-x:auto}
 .draw svg{display:block;min-width:1080px;width:100%;height:auto}
 .draw-note{margin-top:1.1rem;font-family:var(--data);font-size:.68rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-4)}
@@ -283,7 +289,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 .tel-btn svg{width:17px;height:17px;fill:currentColor;flex:none}
 
 /* hero con fotografia de fondo */
-.hero-shot{position:relative;overflow:hidden;padding-block:clamp(2.4rem,6vw,4.2rem) clamp(3rem,7vw,5rem)}
+.hero-shot{position:relative;overflow:hidden;padding-block:clamp(2rem,4.6vw,3.2rem) clamp(2.6rem,5.5vw,4rem)}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.05)}
 .hero-bg::after{content:"";position:absolute;inset:0;
@@ -336,7 +342,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 .wave{display:block;width:100%;height:auto}
 
 /* rejilla de servicios */
-.mid{text-align:center;max-width:62ch;margin:0 auto clamp(2rem,4vw,2.9rem)}
+.mid{text-align:center;max-width:62ch;margin:0 auto clamp(1.5rem,2.8vw,2rem)}
 .mid .tag{justify-self:center}
 .mid h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.85rem);margin-top:.8rem}
 .grid6{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(min(275px,100%),1fr))}
@@ -432,6 +438,130 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
   .data dd{text-align:left}
   .usos div{grid-template-columns:1fr;gap:.2rem}
 }
+/* ============================================================
+   TEMA CLARO
+   El cuerpo es blanco. El navy queda para portada, franjas,
+   alzado, Subterra y pie: bloques marcados con .inv, que
+   redeclaran los tokens de tinta en lugar de recolorear reglas.
+   ============================================================ */
+.inv{
+  color-scheme:dark;
+  --ink:#FFFFFF; --ink-2:#C3CEE8; --ink-3:#8E9CC4; --ink-4:#5D6B96;
+  --rule:rgba(142,156,196,.22); --rule-2:rgba(142,156,196,.38);
+  --card:#101E52;
+  background:var(--d-700);color:var(--ink)
+}
+.deep,.deepest{background:var(--page-2)}
+.inv.deep,.inv.deepest{background:var(--d-700)}
+
+/* eyebrow: rojo sobre claro, oro sobre navy */
+.tag{color:var(--act)}
+.inv .tag{color:var(--tec)}
+.tag.q{color:var(--ink-3)}
+
+/* barra flotante blanca sobre la portada navy */
+.pill{background:rgba(255,255,255,.96);border-color:var(--rule);box-shadow:0 10px 30px rgba(11,22,68,.18)}
+.mark i{color:var(--act)}
+@media (max-width:1060px){ .menu{background:#fff;border-color:var(--rule)} }
+
+/* portada, franjas, alzado, subterra y pie en navy */
+.hero-shot,.strip,#espacio,#subterraneo,footer{
+  --ink:#FFFFFF; --ink-2:#C3CEE8; --ink-3:#8E9CC4; --ink-4:#5D6B96;
+  --rule:rgba(142,156,196,.22); --rule-2:rgba(142,156,196,.38);
+  --card:#101E52;color:var(--ink)
+}
+.hero-shot,#espacio,#subterraneo{background:var(--d-700)}
+.strip{background:var(--d-800)}
+.strip .tel-btn{background:var(--act);color:#fff}
+.strip .tel-btn:hover{background:var(--act-hi)}
+.hero-shot .tag,.strip .tag,#espacio .tag,#subterraneo .tag,footer .tag{color:var(--tec)}
+footer{background:var(--d-900);border-top:0}
+
+/* tarjeta de formulario: isla clara sobre navy */
+.lead-card{
+  --ink:#0B1644; --ink-2:#48547A; --ink-3:#6E7896; --ink-4:#98A1BA;
+  --rule:rgba(11,22,68,.13); --rule-2:rgba(11,22,68,.24);
+  background:#fff;color:var(--ink);border-color:var(--rule);box-shadow:0 20px 48px rgba(4,10,38,.34)
+}
+.lead-card label{color:var(--ink-3)}
+.lead-card .consent{color:var(--ink-3)}
+.lead-card .consent a{color:var(--act)}
+.lead-card .fine{color:var(--ink-3)}
+
+/* campos */
+input,select,textarea{background:#fff;border:1px solid var(--rule-2);color:#0B1644}
+input:focus,select:focus,textarea:focus{border-color:var(--act)}
+::placeholder{color:#9AA3BC}
+label{color:var(--ink-3)}
+.inv label{color:var(--tec)}
+.lead-card label,form label{color:var(--ink-3)}
+.lead-card .consent,form .consent{color:var(--ink-3)}
+#llamada .lead-card{box-shadow:0 18px 40px rgba(4,10,38,.3)}
+
+/* banda de valores: cuatro tarjetas blancas con filete superior */
+.value-band{background:var(--page)}
+.value-in{background:transparent;gap:1rem;box-shadow:none}
+.value{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--rule-2);
+  border-radius:10px;box-shadow:0 8px 24px rgba(11,22,68,.07)}
+.value.hi{background:var(--card);color:inherit;border-top-color:var(--act)}
+.value.hi h3{color:var(--ink)} .value.hi p{color:var(--ink-3)}
+.value svg{stroke:var(--act)}
+
+/* fichas, tarjetas y paneles sobre blanco */
+.sheet{background:var(--paper);border:1px solid var(--rule)}
+.sheet figcaption{color:var(--ink-3)}
+.faq2 details{background:var(--card);border:1px solid var(--rule);border-radius:8px}
+.faq2 details[open]{background:var(--page-2);border-color:var(--rule-2)}
+.faq2 details[open] summary{color:var(--act)}
+summary::after{color:var(--act)}
+.quote{background:var(--card);border:1px solid var(--rule);box-shadow:0 8px 24px rgba(11,22,68,.06)}
+.quote .av{background:var(--page-2);color:var(--act)}
+.stars{color:#A8720A}
+.who-said span{color:var(--ink-3)}
+.who-said b{color:var(--ink)}
+.steps3{border-color:var(--rule)}
+.step3{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.4rem 1.2rem 2.6rem}
+.step3 .ico{background:rgba(193,35,24,.09)}
+.step3 .ico svg{stroke:var(--act)}
+.step3 b{background:var(--d-700);color:#fff}
+.data dd{color:var(--ink)}
+.inv .data dd{color:var(--tec)}
+.data.plain dd{color:var(--ink)}
+.pts li::before{background:var(--act)}
+.inv .pts li::before{background:var(--tec)}
+.si h3{color:var(--act)}
+.no h3{color:var(--ink-3)}
+.who h4{color:var(--act)}
+.inv .who h4{color:var(--tec)}
+.who li::before{background:var(--ink-4)}
+.also b{color:var(--act)}
+.inv .also b{color:var(--tec)}
+.var:hover{border-top-color:var(--act)}
+.btn-line{color:var(--ink);border-color:var(--rule-2)}
+.btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.inv .btn-line{color:#fff}
+.inv .btn-line:hover{background:rgba(255,255,255,.1);color:#fff;border-color:#fff}
+.car-btn{color:var(--ink);border-color:var(--rule-2)}
+.car-btn:hover{border-color:var(--act);background:rgba(193,35,24,.07)}
+.dot{background:var(--rule-2)}
+.dot[aria-current="true"]{background:var(--act)}
+.usos dt{color:var(--act)}
+.ticks li::before{border-color:var(--tec)}
+
+/* distintivo de años: navy sobre la fotografía, como en la referencia */
+.years{background:var(--d-700);color:#fff;box-shadow:0 14px 32px rgba(11,22,68,.3)}
+.years b{color:var(--tec)}
+.years span{color:#8E9CC4}
+
+/* enlaces del pie */
+.menu a.btn-act{color:#fff}
+.foot-links a{color:var(--ink-3)}
+.foot-links a:hover{color:var(--tec)}
+
+/* aviso de sección pendiente */
+.pending{background:#FFF6F5;border-color:var(--act);color:#5B2320}
+.pending b{color:var(--act)}
+
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
@@ -448,7 +578,6 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
       </a>
       <nav class="menu" id="menu" aria-label="Principal">
         <a href="#tipos">Tipos de elevadores</a>
-        <a href="#servicios">Servicios</a>
         <a href="#nosotros">Quiénes somos</a>
         <a href="#faq">Preguntas</a>
         <a href="#cotizar">Contacto</a>
@@ -541,42 +670,6 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
     <div class="dash"></div>
     <p>Un técnico evalúa su espacio y le indica qué sistema lo resuelve, con dimensiones e importe. Sin compromiso.</p>
     <a class="tel-btn" href="tel:+524272014408"><span>Llámenos al +52 1 427 201 4408</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></a>
-  </div>
-</section>
-
-<!-- ===================== SERVICIOS · REJILLA ===================== -->
-<section id="servicios">
-  <div class="wrap">
-    <div class="mid">
-      <p class="tag">Nuestros servicios</p>
-      <h2>Sistemas de elevación para carros</h2>
-    </div>
-    <div class="grid6">
-      <a class="svc" href="#estacionamiento">
-        <div class="svc-img"><img src="assets/dup_indep.jpg" alt="Elevadores para estacionamiento de carros: duplicador sin dependencia" loading="lazy"></div>
-        <div class="svc-txt"><h3>Elevadores para estacionamiento</h3><p>Duplicadores con y sin dependencia que alojan dos carros en el cajón existente, sin ampliar la losa.</p><span class="more">Ver sistema</span></div>
-      </a>
-      <a class="svc" href="#torres">
-        <div class="svc-img"><img src="assets/torres_auto.jpg" alt="Torre de estacionamiento vertical automatizado para carros" loading="lazy"></div>
-        <div class="svc-txt"><h3>Torres de estacionamiento</h3><p>Estacionamiento vertical automatizado que recibe, eleva y entrega cada vehículo sin intervención del conductor.</p><span class="more">Ver sistema</span></div>
-      </a>
-      <a class="svc" href="#rampas">
-        <div class="svc-img"><img src="assets/rampa_ind.jpg" alt="Rampa hidráulica industrial de tijera para autos" loading="lazy"></div>
-        <div class="svc-txt"><h3>Elevadores y rampas para autos</h3><p>Rampas hidráulicas residenciales, plataformas de tijera industriales y rampas de gran formato.</p><span class="more">Ver sistema</span></div>
-      </a>
-      <a class="svc" href="#taller">
-        <div class="svc-img"><img src="assets/rampa_taller.jpg" alt="Elevador de carros para taller mecánico" loading="lazy"></div>
-        <div class="svc-txt"><h3>Elevadores para taller mecánico</h3><p>Elevación de servicio con triple bloqueo de seguridad y capacidad calculada a su parque vehicular.</p><span class="more">Ver sistema</span></div>
-      </a>
-      <a class="svc" href="#tipos">
-        <div class="svc-img"><img src="assets/elev_resid.jpg" alt="Montacoches hidráulico residencial, comercial e industrial" loading="lazy"></div>
-        <div class="svc-txt"><h3>Montacoches hidráulico</h3><p>Traslada el vehículo entre niveles sin rampa, en viviendas, edificios, hospitales y naves industriales.</p><span class="more">Ver sistema</span></div>
-      </a>
-      <a class="svc" href="#subterraneo">
-        <div class="svc-img"><img src="assets/subterraneo.jpg" alt="Elevador de carro subterráneo SUBTERRA" loading="lazy"></div>
-        <div class="svc-txt"><h3>Sistema subterráneo SUBTERRA</h3><p>Resguarda el vehículo bajo nivel y deja la superficie libre, sin impacto visual en cocheras y residencias.</p><span class="more">Ver sistema</span></div>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -879,7 +972,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== 1 · ESTACIONAMIENTO ===================== -->
-<section class="deep" id="estacionamiento">
+<section id="estacionamiento">
   <div class="wrap">
     <div class="head">
       <p class="tag">Duplicadores y estacionamiento automatizado</p>
@@ -896,7 +989,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <li><b>Independencia total.</b> No se requiere maniobra previa para retirar el vehículo superior.</li>
           <li><b>Triple seguridad.</b> Eléctrica, hidráulica y mecánica, independientes entre sí.</li>
         </ul>
-        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar duplicador</a></p>
+        <p style="margin-top:1.4rem"><a class="btn btn-act" href="#cotizar">Cotizar duplicador</a></p>
       </div>
       <figure class="sheet" style="margin:0">
         <img src="assets/dup_indep.jpg" alt="Duplicador de estacionamiento sin dependencia: cada carro entra y sale sin mover al otro" loading="lazy">
@@ -904,18 +997,9 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
       </figure>
     </div>
 
-    <div class="vars">
-      <article class="var">
-        <h3>Duplicador con dependencia</h3>
-        <p>Dos carros por cajón: se desplaza el vehículo inferior para retirar el superior. La opción más compacta y de menor costo para multiplicar lugares de inmediato.</p>
-        <figure class="sheet var-shot"><img src="assets/dup_dep.jpg" alt="Duplicador de estacionamiento con dependencia: dos carros en un solo cajón" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Rampa apilacoches para estacionamiento</h3>
-        <p>Sistemas de apilación y ahorro de espacio, dependientes o no dependientes, para casa, negocio o flotilla completa.</p>
-        <figure class="sheet var-shot"><img src="assets/apilacoches.jpg" alt="Rampa apilacoches para estacionamiento de carros" loading="lazy"></figure>
-      </article>
-    </div>
+    <p class="also"><b>Otras configuraciones de este sistema</b>Duplicador de estacionamiento con dependencia · Rampa apilacoches para estacionamiento, dependiente o no dependiente, para casa, negocio o flotilla completa.</p>
+
+    
 
     <div class="who">
       <h4>A quién está dirigido</h4>
@@ -932,7 +1016,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== 2 · RAMPAS ===================== -->
-<section id="rampas">
+<section class="deep" id="rampas">
   <div class="wrap">
     <div class="head">
       <p class="tag">Rampas hidráulicas y plataformas</p>
@@ -949,7 +1033,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <li><b>Accionamiento hidráulico.</b> Mecanismo de tijera con control de descenso.</li>
           <li><b>Aplicación industrial.</b> Andenes de carga, líneas de producción y patios de maniobra.</li>
         </ul>
-        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar rampa</a></p>
+        <p style="margin-top:1.4rem"><a class="btn btn-act" href="#cotizar">Cotizar rampa</a></p>
       </div>
       <figure class="sheet" style="margin:0">
         <img src="assets/rampa_ind.jpg" alt="Rampa hidráulica industrial de tijera para carga y maniobra de vehículos" loading="lazy">
@@ -957,23 +1041,9 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
       </figure>
     </div>
 
-    <div class="vars">
-      <article class="var">
-        <h3>Rampa hidráulica para autos residencial</h3>
-        <p>La rampa hidráulica para autos más directa: un cajón adicional en la cochera, montado sobre el espacio existente.</p>
-        <figure class="sheet var-shot"><img src="assets/apilacoches.jpg" alt="Rampa hidráulica para autos en cochera residencial" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Rampa automotriz de gran formato</h3>
-        <p>Elevación para unidades largas y pesadas — autobuses, camiones y equipo especial — con estructura calculada para la carga real.</p>
-        <figure class="sheet var-shot"><img src="assets/rampa_taller.jpg" alt="Rampa automotriz de gran formato para autobuses y unidades pesadas" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Montacoches hidráulico</h3>
-        <p>Cuando no hay espacio para una rampa de acceso, el montacoches traslada el vehículo entre niveles por elevación directa.</p>
-        <figure class="sheet var-shot"><img src="assets/elev_resid.jpg" alt="Montacoches hidráulico para traslado de vehículos entre niveles" loading="lazy"></figure>
-      </article>
-    </div>
+    <p class="also"><b>Otras configuraciones de este sistema</b>Rampa hidráulica para autos residencial · Rampa automotriz de gran formato para autobuses, camiones y equipo especial · Montacoches hidráulico para traslado entre niveles sin rampa de acceso.</p>
+
+    
 
     <div class="who">
       <h4>A quién está dirigido</h4>
@@ -988,7 +1058,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== 3 · TORRES ===================== -->
-<section class="deep" id="torres">
+<section id="torres">
   <div class="wrap">
     <div class="head">
       <p class="tag">Estacionamiento vertical automatizado</p>
@@ -1010,27 +1080,13 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <li><b>Seguridad de resguardo.</b> Ningún tercero accede a los vehículos almacenados.</li>
           <li><b>Proyecto llave en mano.</b> Cálculo estructural, fabricación, montaje en sitio y puesta en marcha.</li>
         </ul>
-        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar torre de estacionamiento</a></p>
+        <p style="margin-top:1.4rem"><a class="btn btn-act" href="#cotizar">Cotizar torre de estacionamiento</a></p>
       </div>
     </div>
 
-    <div class="vars">
-      <article class="var">
-        <h3>Torre inteligente multiniveles</h3>
-        <p>Proyectos personalizados para alto flujo vehicular, con montaje en sitio y diseño estructural; la cimentación se incluye en la asesoría técnica.</p>
-        <figure class="sheet var-shot"><img src="assets/torres_multi.jpg" alt="Torre de estacionamiento inteligente multiniveles para carros" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Almacenamiento vertical industrial</h3>
-        <p>El mismo principio aplicado a inventario y unidades en resguardo: aprovecha la altura libre de la nave en lugar de rentar más superficie.</p>
-        <figure class="sheet var-shot"><img src="assets/subterraneo.jpg" alt="Sistema de almacenamiento y estacionamiento vertical de vehículos" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Sistema Drone</h3>
-        <p>Estacionamiento automatizado para carros compactos, subcompactos y camionetas SUV. Tecnología electro-hidráulica de 120–220 VCA y 2 HP.</p>
-        <figure class="sheet photo var-shot"><img src="assets/drone_foto.jpg" alt="Sistema Drone de estacionamiento automatizado instalado en sitio" loading="lazy"></figure>
-      </article>
-    </div>
+    <p class="also"><b>Otras configuraciones de este sistema</b>Torre de estacionamiento inteligente multiniveles · Almacenamiento vertical industrial para inventario y unidades en resguardo · Sistema Drone de estacionamiento automatizado para carros compactos, subcompactos y camionetas SUV.</p>
+
+    
 
     <div class="who">
       <h4>A quién está dirigido</h4>
@@ -1045,7 +1101,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== 4 · TALLER MECÁNICO ===================== -->
-<section id="taller">
+<section class="deep" id="taller">
   <div class="wrap">
     <div class="head">
       <p class="tag">Equipamiento para taller mecánico</p>
@@ -1064,7 +1120,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <li><b>Triple bloqueo de seguridad.</b> Eléctrico, hidráulico y mecánico, independientes entre sí.</li>
           <li><b>Refacciones y servicio en México.</b> Al fabricar localmente, no se depende de importación para una pieza.</li>
         </ul>
-        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar elevador de taller</a></p>
+        <p style="margin-top:1.4rem"><a class="btn btn-act" href="#cotizar">Cotizar elevador de taller</a></p>
       </div>
       <div>
         <figure class="sheet" style="margin:0">
@@ -1093,7 +1149,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== 5 · SUBTERRÁNEO ===================== -->
-<section class="deep" id="subterraneo">
+<section class="inv" id="subterraneo">
   <div class="wrap">
     <div class="head">
       <p class="tag">Sistema SUBTERRA</p>
@@ -1116,7 +1172,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <li><b>Profundidad por proyecto.</b> El foso se calcula sobre el nivel freático, el tipo de suelo y las dimensiones del vehículo.</li>
           <li><b>Triple seguridad.</b> Eléctrica, hidráulica y mecánica, independientes entre sí.</li>
         </ul>
-        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar sistema subterráneo</a></p>
+        <p style="margin-top:1.4rem"><a class="btn btn-act" href="#cotizar">Cotizar sistema subterráneo</a></p>
       </div>
     </div>
 
@@ -1141,7 +1197,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== QUIÉNES SOMOS ===================== -->
-<section class="deep" id="nosotros">
+<section id="nosotros">
   <div class="wrap">
     <div class="about">
       <div>
@@ -1168,7 +1224,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== FRANJA · DEVOLUCIÓN DE LLAMADA ===================== -->
-<section class="strip dark" id="llamada">
+<section class="strip inv" id="llamada">
   <div class="wrap">
     <h2>¿Prefiere que le llamemos nosotros?</h2>
     <div class="dash"></div>
@@ -1191,7 +1247,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 <!-- ===================== ALCANCE =====================
      Las cuatro líneas de "Lo que no realizamos" son declaraciones de
      política comercial: confirmar con el cliente antes de publicar. -->
-<section class="deepest" id="alcance">
+<section class="deep" id="alcance">
   <div class="wrap">
     <div class="head">
       <p class="tag q">Alcance de servicio</p>
@@ -1329,7 +1385,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </section>
 
 <!-- ===================== CONTACTO ===================== -->
-<section class="deepest" id="cotizar">
+<section id="cotizar">
   <div class="wrap">
     <div class="mid">
       <p class="tag">Contacto</p>
@@ -1504,7 +1560,10 @@ menu.addEventListener('click', function (e) {
     vp.addEventListener(ev, function () { clearTimeout(release); target = null; }, { passive: true });
   });
 
-  function start() { if (!quiet && !timer) timer = setInterval(function () { go(idx + 1); }, 6500); }
+  /* 8 s: suficiente para leer titulo, uso, funcion y capacidad sin que la
+     diapositiva se quede quieta. Se detiene al interactuar y no arranca si
+     el visitante pidio movimiento reducido. */
+  function start() { if (!quiet && !timer) timer = setInterval(function () { go(idx + 1); }, 8000); }
   function stop() { clearInterval(timer); timer = null; }
 
   ['pointerenter', 'focusin', 'pointerdown'].forEach(function (ev) { vp.addEventListener(ev, stop); });

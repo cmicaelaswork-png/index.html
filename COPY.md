@@ -6,6 +6,16 @@
 
 ---
 
+## 0. Tema y longitud
+
+**Tema claro.** Cuerpo blanco (`#FFFFFF`) alternando con `#F5F6F8`. El navy `#0B1644` queda para portada, franjas CTA, alzado, Subterra y pie, marcados con `.inv`, que redeclara los tokens de tinta en lugar de recolorear reglas. El eyebrow es rojo sobre claro y oro sobre navy.
+
+**Longitud.** De 19,5 a 15,1 pantallas en escritorio (−23 %) y de 34,5 a 26,2 en móvil (−25 %). Se eliminó la rejilla de servicios, que duplicaba el carrusel, y las tarjetas de variante de las secciones, cuyos términos se conservaron en una línea compacta de «otras configuraciones».
+
+**Carrusel.** Avance automático cada 8 s, detenido al pasar el puntero, al enfocar y con movimiento reducido.
+
+---
+
 ## 1. Posicionamiento
 
 **Frase madre:** Ingeniería mexicana que multiplica cajones de estacionamiento.
