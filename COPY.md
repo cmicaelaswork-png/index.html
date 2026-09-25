@@ -33,7 +33,26 @@
 
 ## 2. Estructura de la página
 
-El H1 quedó reducido a **«Elevadores de carro»**. La explicación de tipos vive inmediatamente debajo, en un carrusel de 10 sistemas donde cada uno declara **Uso**, **Función** y **Capacidad**; después vienen las cuatro secciones de detalle.
+Se aplica el esqueleto de la referencia (`ss_web_jardinesaraque`) con la identidad de Grupo DYS:
+
+| # | Bloque | Estado |
+|---|---|---|
+| 1 | Cabecera flotante tipo píldora con botón de teléfono | aplicado |
+| 2 | Portada con fotografía de fondo y **formulario de presupuesto** a la derecha | aplicado |
+| 3 | Banda de 3 tarjetas de valor, la central destacada en claro | aplicado |
+| 4 | Servicios en rejilla de 6, cada uno enlaza a su sección | aplicado |
+| 5 | Carrusel de tipos (10 sistemas) | aplicado |
+| 6 | Alzado comparativo | aplicado |
+| 7 | Cuatro secciones de detalle con «A quién está dirigido» | aplicado |
+| 8 | Quiénes somos con **distintivo de años** sobre la fotografía | aplicado |
+| 9 | Franja de **devolución de llamada** con formulario corto | aplicado |
+| 10 | Proceso en tarjetas con badge numerado, marco punteado | aplicado |
+| 11 | FAQ a **dos columnas** | aplicado |
+| 12 | Testimonios | **pendiente de contenido real** |
+| 13 | Contacto: tarjeta de datos + formulario | aplicado |
+| 14 | Pie con enlaces legales | **enlaces por conectar** |
+
+El H1 quedó reducido a **«Elevadores de carro»**. Hay tres formularios (portada, devolución de llamada y contacto); los tres envían por `mailto:` y necesitan un endpoint real.
 
 ### Carrusel de tipos (10 sistemas)
 Duplicador con dependencia · Duplicador sin dependencia · Rampa apilacoches · Torre de estacionamiento vertical automatizado · Torre inteligente multiniveles · Elevador subterráneo SUBTERRA · Montacoches y elevación residencial, comercial e industrial · Rampa industrial de tijera · Elevador para taller mecánico · Sistema Drone.

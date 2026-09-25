@@ -114,7 +114,7 @@ ul{margin:0;padding:0;list-style:none}
 .badge img{width:100%;border-radius:50%;box-shadow:0 26px 64px rgba(0,0,0,.55)}
 .badge::after{content:"";position:absolute;inset:-8%;border-radius:50%;
   border:1px solid rgba(178,168,255,.26);box-shadow:inset 0 0 84px 20px rgba(96,80,200,.26)}
-.figs{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+.figs{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));
   margin-top:clamp(2.2rem,5vw,3.2rem);padding-top:1.9rem;border-top:1px solid var(--rule)}
 .fig b{display:block;font-family:var(--data);font-variant-numeric:tabular-nums;
   font-size:2.15rem;font-weight:600;color:var(--tec);line-height:1;letter-spacing:-.03em}
@@ -170,7 +170,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
   grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center}
 .feat h3{font-family:var(--sign);font-size:clamp(1.3rem,2.7vw,1.75rem);margin-bottom:.7rem}
 .feat p{color:var(--ink-2);font-size:.97rem}
-.vars{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+.vars{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));
   margin-top:clamp(2rem,4vw,2.8rem)}
 .var{display:flex;flex-direction:column;gap:.9rem;padding-top:1.1rem;
   border-top:2px solid var(--rule-2);transition:border-color .16s}
@@ -184,7 +184,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 .who{margin-top:clamp(2rem,4vw,2.6rem);padding-top:1.6rem;border-top:1px solid var(--rule)}
 .who h4{font-family:var(--data);font-size:.7rem;font-weight:600;letter-spacing:.17em;
   text-transform:uppercase;color:var(--tec);margin-bottom:1.1rem}
-.who ul{display:grid;gap:.7rem 1.6rem;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.who ul{display:grid;gap:.7rem 1.6rem;grid-template-columns:repeat(auto-fit,minmax(min(215px,100%),1fr))}
 .who li{position:relative;padding-left:1.4rem;color:var(--ink-2);font-size:.92rem}
 .who li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;
   background:var(--ink-4);transform:rotate(45deg)}
@@ -200,7 +200,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 .nos li::before{content:"\00d7";position:absolute;left:0;top:-.08em;color:var(--act-hi);
   font-size:1.3rem;font-weight:700}
 .nos b{color:var(--ink-2);font-weight:600}
-.two{display:grid;gap:clamp(1.8rem,5vw,3.2rem);grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.two{display:grid;gap:clamp(1.8rem,5vw,3.2rem);grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr))}
 .two h3{font-family:var(--data);font-size:.72rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
 .si h3{color:var(--tec)}
 .no h3{color:var(--ink-4)}
@@ -224,7 +224,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
   text-transform:uppercase;color:var(--ink-4)}
 
 /* ---------- proceso ---------- */
-.flow{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.flow{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(min(215px,100%),1fr))}
 .phase{display:grid;gap:.55rem;align-content:start;padding-left:1.2rem;border-left:1px solid var(--rule)}
 .phase b{font-family:var(--data);font-size:.8rem;font-weight:600;color:var(--tec);letter-spacing:.06em}
 .phase h3{font-family:var(--sign);font-size:1.12rem}
@@ -241,7 +241,7 @@ details[open] summary::after{content:"\2212"}
 details p{padding-bottom:1.15rem;color:var(--ink-2);font-size:.93rem;max-width:62ch}
 
 /* ---------- contacto ---------- */
-.reach{display:grid;gap:clamp(2rem,5vw,3.4rem);grid-template-columns:repeat(auto-fit,minmax(295px,1fr))}
+.reach{display:grid;gap:clamp(2rem,5vw,3.4rem);grid-template-columns:repeat(auto-fit,minmax(min(295px,100%),1fr))}
 .reach h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.7rem)}
 form{display:grid;gap:1rem}
 label{display:block;font-family:var(--data);font-size:.64rem;font-weight:500;letter-spacing:.16em;
@@ -264,6 +264,167 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 .wa:hover{transform:scale(1.07)}
 .wa svg{width:29px;height:29px;fill:#fff}
 
+
+/* ============================================================
+   ESTRUCTURA (referencia jardinesaraque) sobre identidad DYS
+   ============================================================ */
+.pill-bar{position:sticky;top:14px;z-index:60;margin-block:14px 0}
+.pill{position:relative;display:flex;align-items:center;gap:1.1rem;background:rgba(6,12,46,.95);
+  backdrop-filter:blur(12px);border:1px solid var(--rule);border-radius:60px;
+  padding:.55rem .6rem .55rem 1.3rem;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.pill .mark{margin-right:auto}
+.tel-btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--act);color:#fff;
+  border-radius:60px;padding:.72rem 1.35rem;text-decoration:none;font-family:var(--sign);
+  font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  transition:background .16s}
+.tel-btn:hover{background:var(--act-hi)}
+.tel-btn small{display:block;font-family:var(--data);font-size:.58rem;font-weight:500;
+  letter-spacing:.14em;opacity:.85;text-transform:uppercase}
+.tel-btn svg{width:17px;height:17px;fill:currentColor;flex:none}
+
+/* hero con fotografia de fondo */
+.hero-shot{position:relative;overflow:hidden;padding-block:clamp(2.4rem,6vw,4.2rem) clamp(3rem,7vw,5rem)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.05)}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(6,12,46,.93) 0%,rgba(8,15,57,.78) 38%,rgba(11,22,68,.42) 100%)}
+.hero-shot>.wrap{position:relative;z-index:1}
+.hero-cols{display:grid;gap:clamp(1.8rem,4vw,3rem);grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center}
+.hero-cols h1{font-family:var(--sign);font-size:clamp(2.6rem,7vw,4.6rem);margin-block:.9rem 1.1rem}
+.ticks{display:grid;gap:.6rem;margin-top:1.6rem}
+.ticks li{position:relative;padding-left:1.9rem;color:var(--ink-2);font-size:.95rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.28em;width:13px;height:8px;
+  border-left:2px solid var(--tec);border-bottom:2px solid var(--tec);transform:rotate(-45deg)}
+
+/* tarjeta de formulario */
+.lead-card{background:var(--d-600);border:1px solid var(--rule-2);border-radius:12px;
+  padding:clamp(1.4rem,3vw,2rem);box-shadow:0 22px 54px rgba(0,0,0,.42)}
+.lead-card h2{font-family:var(--sign);font-size:clamp(1.4rem,3vw,1.9rem);text-align:center;margin-bottom:.4rem}
+.lead-card .fine{text-align:center;margin-bottom:1.3rem;display:block}
+.pair{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-family:var(--text);font-size:.78rem;
+  font-weight:400;letter-spacing:normal;text-transform:none;color:var(--ink-3);margin-bottom:0}
+.consent input{width:auto;margin:.2em 0 0;flex:none}
+.consent a{color:var(--tec)}
+.lead-card .btn{border-radius:60px}
+
+/* banda de valores */
+.value-band{background:var(--d-800);border:0;padding-block:0;margin-block:0}
+.value-in{display:grid;gap:1px;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));
+  background:var(--rule);border-radius:12px;overflow:hidden;
+  transform:translateY(-38px);box-shadow:0 20px 46px rgba(0,0,0,.4)}
+.value{background:var(--d-600);padding:clamp(1.5rem,3vw,2.1rem)}
+.value.hi{background:var(--paper);color:var(--d-900)}
+.value.hi h3{color:var(--d-800)} .value.hi p{color:#41507d}
+.value svg{width:34px;height:34px;fill:none;stroke:var(--tec);stroke-width:1.6;margin-bottom:1rem}
+.value.hi svg{stroke:var(--act)}
+.value h3{font-family:var(--sign);font-size:1.28rem;margin-bottom:.55rem}
+.value p{color:var(--ink-3);font-size:.9rem}
+
+/* franja CTA */
+.strip{background:var(--act);border:0;text-align:center;position:relative}
+.strip h2{font-family:var(--sign);font-size:clamp(1.7rem,4vw,2.5rem)}
+.strip .dash{width:min(420px,70%);height:1px;margin:1.2rem auto;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 8px,transparent 8px 16px)}
+.strip p{color:rgba(255,255,255,.9);max-width:60ch;margin-inline:auto}
+.strip .tel-btn{background:var(--tec);color:var(--d-900);margin-top:1.8rem}
+.strip .tel-btn:hover{background:#FFC64A}
+.strip.dark{background:var(--d-900)}
+.strip.dark .tel-btn{background:var(--act);color:#fff}
+
+/* onda separadora */
+.wave{display:block;width:100%;height:auto}
+
+/* rejilla de servicios */
+.mid{text-align:center;max-width:62ch;margin:0 auto clamp(2rem,4vw,2.9rem)}
+.mid .tag{justify-self:center}
+.mid h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.85rem);margin-top:.8rem}
+.grid6{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(min(275px,100%),1fr))}
+.svc{display:flex;flex-direction:column;background:var(--d-600);border:1px solid var(--rule);
+  border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;
+  transition:transform .18s,border-color .18s}
+.svc:hover{transform:translateY(-5px);border-color:var(--tec)}
+.svc-img{background:var(--paper);padding:14px}
+.svc-img img{width:100%;aspect-ratio:16/10;object-fit:contain;mix-blend-mode:multiply}
+.svc-img.photo img{mix-blend-mode:normal;object-fit:cover}
+.svc-txt{padding:1.3rem;text-align:center;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.svc h3{font-family:var(--sign);font-size:1.22rem}
+.svc p{color:var(--ink-3);font-size:.89rem}
+.svc .more{margin-top:auto;padding-top:.7rem;font-family:var(--data);font-size:.66rem;
+  font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--tec)}
+
+/* quienes somos con distintivo */
+.about{display:grid;gap:clamp(1.8rem,5vw,3.2rem);grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));align-items:center}
+.about-shot{position:relative}
+.about-shot .sheet{margin:0}
+.years{position:absolute;right:-14px;bottom:-24px;background:var(--paper);color:var(--d-900);
+  border-radius:12px;padding:1rem 1.5rem;text-align:center;box-shadow:0 16px 36px rgba(0,0,0,.4)}
+.years b{display:block;font-family:var(--data);font-size:2.2rem;font-weight:600;line-height:1;color:var(--act)}
+.years span{display:block;margin-top:.3rem;font-family:var(--data);font-size:.6rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:#41507d}
+
+/* proceso en tarjetas con numero */
+.steps3{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(min(232px,100%),1fr));
+  border:1px dashed var(--rule-2);border-radius:14px;padding:clamp(1.3rem,3vw,2rem)}
+.step3{text-align:center;display:flex;flex-direction:column;align-items:center;gap:.7rem;
+  padding-bottom:2.4rem;position:relative}
+.step3 .ico{width:62px;height:62px;border-radius:50%;background:rgba(242,176,29,.14);
+  display:grid;place-items:center}
+.step3 .ico svg{width:27px;height:27px;fill:none;stroke:var(--tec);stroke-width:1.6}
+.step3 h3{font-family:var(--sign);font-size:1.15rem}
+.step3 p{color:var(--ink-3);font-size:.88rem}
+.step3 b{position:absolute;bottom:0;left:50%;transform:translateX(-50%);background:var(--tec);
+  color:var(--d-900);font-family:var(--data);font-weight:600;font-size:.95rem;
+  padding:.3rem .95rem;border-radius:4px}
+
+/* FAQ a dos columnas */
+.faq2{display:grid;gap:.6rem clamp(1.2rem,3vw,2rem);grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));align-items:start}
+.faq2 details{background:var(--d-600);border:1px solid var(--rule);border-bottom:1px solid var(--rule);border-radius:8px}
+.faq2 summary{padding:1rem 1.2rem}
+.faq2 details[open]{background:var(--d-500);border-color:var(--rule-2)}
+.faq2 details[open] summary{color:var(--tec)}
+.faq2 details p{padding:0 1.2rem 1.1rem}
+
+/* testimonios */
+.quotes{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr))}
+.quote{background:var(--d-600);border:1px solid var(--rule);border-radius:12px;padding:1.4rem;
+  display:flex;flex-direction:column;gap:.9rem}
+.stars{color:var(--tec);letter-spacing:.14em;font-size:.95rem}
+.quote p{color:var(--ink-2);font-size:.92rem;font-style:italic;flex:1}
+.who-said{display:flex;align-items:center;gap:.75rem;padding-top:.9rem;border-top:1px solid var(--rule)}
+.who-said .av{width:38px;height:38px;border-radius:50%;background:var(--d-500);display:grid;
+  place-items:center;font-family:var(--sign);font-size:1.05rem;color:var(--tec);flex:none}
+.who-said b{display:block;font-size:.86rem}
+.who-said span{display:block;font-family:var(--data);font-size:.66rem;color:var(--ink-4);letter-spacing:.08em}
+.pending{border:1px dashed var(--act-hi);border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.6rem;
+  font-family:var(--data);font-size:.78rem;color:var(--ink-2);line-height:1.7}
+.pending b{color:var(--act-hi);letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;display:block;margin-bottom:.4rem}
+
+/* contacto: tarjeta de datos */
+.contact-card{background:var(--act);border-radius:14px;padding:clamp(1.6rem,3.4vw,2.2rem);
+  display:grid;gap:1.4rem;align-content:start}
+.contact-card h3{font-family:var(--sign);font-size:clamp(1.4rem,3vw,1.85rem)}
+.cline{display:flex;align-items:center;gap:1rem}
+.cline .box{width:52px;height:52px;border-radius:10px;background:#fff;display:grid;place-items:center;flex:none}
+.cline .box svg{width:22px;height:22px;fill:var(--act)}
+.cline dt{font-family:var(--sign);font-size:1.05rem;font-weight:700;margin:0}
+.cline dd{margin:0;font-family:var(--data);font-size:.85rem;color:rgba(255,255,255,.92);word-break:break-word}
+.cline dd a{color:inherit;text-decoration:none}
+.cline dd a:hover{text-decoration:underline}
+
+.foot-links{display:flex;gap:1.3rem;flex-wrap:wrap}
+.foot-links a{color:var(--ink-3);text-decoration:none}
+.foot-links a:hover{color:var(--tec)}
+
+@media (max-width:860px){
+  .hero-cols,.pair{grid-template-columns:1fr}
+  .pill{border-radius:16px;padding:.7rem .8rem}
+  .pill .tel-btn span{display:none}
+  .pill .tel-btn{padding:.7rem .85rem}
+  .value-in{transform:translateY(-22px)}
+  .years{right:8px;bottom:-18px}
+}
+
 @media (max-width:860px){
   .hero-in,.feat,.slide{grid-template-columns:1fr}
   .badge{order:-1;width:min(72%,280px)}
@@ -278,54 +439,146 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 </head>
 <body>
 
-<header class="bar">
-  <div class="wrap bar-in">
-    <a class="mark" href="#top">
-      <img src="assets/favicon.png" alt="" width="36" height="36">
-      <span><b>Grupo DYS</b><i>Sistemas automatizados</i></span>
-    </a>
-    <nav class="menu" id="menu" aria-label="Principal">
-      <a href="#tipos">Tipos de elevadores</a>
-      <a href="#estacionamiento">Estacionamiento</a>
-      <a href="#rampas">Rampas</a>
-      <a href="#torres">Torres</a>
-      <a href="#taller">Taller mecánico</a>
-      <a href="#faq">Preguntas</a>
-      <a class="btn btn-act" href="#cotizar">Cotizar proyecto</a>
-    </nav>
-    <a class="btn btn-act" href="#cotizar">Cotizar proyecto</a>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+<header class="pill-bar">
+  <div class="wrap">
+    <div class="pill">
+      <a class="mark" href="#top">
+        <img src="assets/favicon.png" alt="" width="36" height="36">
+        <span><b>Grupo DYS</b><i>Sistemas automatizados</i></span>
+      </a>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#tipos">Tipos de elevadores</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Quiénes somos</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#cotizar">Contacto</a>
+        <a class="btn btn-act" href="#cotizar">Cotizar proyecto</a>
+      </nav>
+      <a class="tel-btn" href="tel:+524272014408">
+        <span>Llámenos al<small>+52 1 427 201 4408</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>
+      </a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+    </div>
   </div>
 </header>
 
 <main id="top">
 
 <!-- ===================== PORTADA ===================== -->
-<div class="hero">
+<div class="hero-shot">
+  <div class="hero-bg"><img src="assets/drone_foto.jpg" alt="" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="hero-in">
+    <div class="hero-cols">
       <div>
         <p class="tag">Grupo DYS · iaDys · México</p>
         <h1>Elevadores de carro</h1>
-        <p class="lede">Diseño, fabricación e instalación de elevadores para carros en toda la República Mexicana: duplicadores de estacionamiento, estacionamiento vertical automatizado, torres de estacionamiento, montacoches hidráulicos, rampas para autos y elevadores para taller mecánico. Cada equipo se calcula sobre las medidas reales del espacio del cliente.</p>
-        <div class="hero-act">
-          <a class="btn btn-act" href="#cotizar">Solicitar cotización</a>
-          <a class="btn btn-line" href="#tipos">Ver tipos de elevadores</a>
-        </div>
+        <p class="lede">Fabricación, instalación y servicio de elevadores para carros en toda la República Mexicana. Cada equipo se calcula sobre las medidas reales del espacio del cliente.</p>
+        <ul class="ticks">
+          <li>Duplicadores de estacionamiento y estacionamiento vertical automatizado</li>
+          <li>Montacoches hidráulicos, rampas para autos y sistema subterráneo</li>
+          <li>Elevadores para taller mecánico con capacidad a su parque vehicular</li>
+          <li>Diseño, fabricación e instalación propia — 30 años de operación</li>
+        </ul>
       </div>
-      <figure class="badge">
-        <img src="assets/logo-iadys.png" alt="iaDys — estacionamientos verticales inteligentes de Grupo DYS" width="380" height="380">
-      </figure>
-    </div>
 
-    <div class="figs">
-      <div class="fig"><b>30</b><span>Años de experiencia</span></div>
-      <div class="fig"><b>&lt;24 h</b><span>Respuesta a cotización</span></div>
-      <div class="fig"><b>15</b><span>Años de vida útil</span></div>
-      <div class="fig"><b>2</b><span>Años de garantía</span></div>
+      <!-- TODO: los tres formularios envian por mailto:. Sustituir por el endpoint
+           real antes de publicar; mailto: depende del cliente de correo del
+           visitante y pierde solicitudes. -->
+      <form class="lead-card" id="heroForm" action="mailto:jalvarez@grupodys.com" method="post" enctype="text/plain">
+        <div>
+          <h2>Su presupuesto sin costo en menos de 24 h</h2>
+          <span class="fine">Respuesta en horas hábiles</span>
+        </div>
+        <div class="pair">
+          <div><label for="h-nombre">Nombre</label><input id="h-nombre" name="nombre" type="text" required autocomplete="given-name"></div>
+          <div><label for="h-apellido">Apellidos</label><input id="h-apellido" name="apellidos" type="text" autocomplete="family-name"></div>
+        </div>
+        <div class="pair">
+          <div><label for="h-mail">Correo</label><input id="h-mail" name="correo" type="email" autocomplete="email"></div>
+          <div><label for="h-tel">Teléfono</label><input id="h-tel" name="telefono" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div>
+          <label for="h-msg">Mensaje</label>
+          <textarea id="h-msg" name="mensaje" placeholder="Medidas del espacio y número de carros que necesita estacionar."></textarea>
+        </div>
+        <label class="consent" for="h-ok">
+          <input type="checkbox" id="h-ok" name="privacidad" required>
+          <span>He leído y acepto la <a href="#privacidad">política de privacidad</a>.</span>
+        </label>
+        <button class="btn btn-act sub" type="submit">Solicitar presupuesto</button>
+      </form>
     </div>
   </div>
 </div>
+
+<!-- ===================== BANDA DE VALORES ===================== -->
+<section class="value-band">
+  <div class="wrap">
+    <div class="value-in">
+      <div class="value">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+        <h3>Fabricación propia</h3>
+        <p>Diseñamos, fabricamos e instalamos en nuestra planta de San Juan del Río. No operamos como distribuidores ni intermediarios.</p>
+      </div>
+      <div class="value hi">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <h3>Respuesta en menos de 24 h</h3>
+        <p>Cada solicitud recibe una propuesta concreta con importe cerrado dentro de las 24 horas hábiles siguientes.</p>
+      </div>
+      <div class="value">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h3>Instalación en toda la República</h3>
+        <p>Montaje en sitio, pruebas de carga y capacitación de uso incluidas, con servicio posterior propio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FRANJA CTA ===================== -->
+<section class="strip">
+  <div class="wrap">
+    <h2>¿Necesita más cajones sin ampliar el predio?</h2>
+    <div class="dash"></div>
+    <p>Un técnico evalúa su espacio y le indica qué sistema lo resuelve, con dimensiones e importe. Sin compromiso.</p>
+    <a class="tel-btn" href="tel:+524272014408"><span>Llámenos al +52 1 427 201 4408</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS · REJILLA ===================== -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="mid">
+      <p class="tag">Nuestros servicios</p>
+      <h2>Sistemas de elevación para carros</h2>
+    </div>
+    <div class="grid6">
+      <a class="svc" href="#estacionamiento">
+        <div class="svc-img"><img src="assets/dup_indep.jpg" alt="Elevadores para estacionamiento de carros: duplicador sin dependencia" loading="lazy"></div>
+        <div class="svc-txt"><h3>Elevadores para estacionamiento</h3><p>Duplicadores con y sin dependencia que alojan dos carros en el cajón existente, sin ampliar la losa.</p><span class="more">Ver sistema</span></div>
+      </a>
+      <a class="svc" href="#torres">
+        <div class="svc-img"><img src="assets/torres_auto.jpg" alt="Torre de estacionamiento vertical automatizado para carros" loading="lazy"></div>
+        <div class="svc-txt"><h3>Torres de estacionamiento</h3><p>Estacionamiento vertical automatizado que recibe, eleva y entrega cada vehículo sin intervención del conductor.</p><span class="more">Ver sistema</span></div>
+      </a>
+      <a class="svc" href="#rampas">
+        <div class="svc-img"><img src="assets/rampa_ind.jpg" alt="Rampa hidráulica industrial de tijera para autos" loading="lazy"></div>
+        <div class="svc-txt"><h3>Elevadores y rampas para autos</h3><p>Rampas hidráulicas residenciales, plataformas de tijera industriales y rampas de gran formato.</p><span class="more">Ver sistema</span></div>
+      </a>
+      <a class="svc" href="#taller">
+        <div class="svc-img"><img src="assets/rampa_taller.jpg" alt="Elevador de carros para taller mecánico" loading="lazy"></div>
+        <div class="svc-txt"><h3>Elevadores para taller mecánico</h3><p>Elevación de servicio con triple bloqueo de seguridad y capacidad calculada a su parque vehicular.</p><span class="more">Ver sistema</span></div>
+      </a>
+      <a class="svc" href="#tipos">
+        <div class="svc-img"><img src="assets/elev_resid.jpg" alt="Montacoches hidráulico residencial, comercial e industrial" loading="lazy"></div>
+        <div class="svc-txt"><h3>Montacoches hidráulico</h3><p>Traslada el vehículo entre niveles sin rampa, en viviendas, edificios, hospitales y naves industriales.</p><span class="more">Ver sistema</span></div>
+      </a>
+      <a class="svc" href="#tipos">
+        <div class="svc-img"><img src="assets/subterraneo.jpg" alt="Elevador de carro subterráneo SUBTERRA" loading="lazy"></div>
+        <div class="svc-txt"><h3>Sistema subterráneo SUBTERRA</h3><p>Resguarda el vehículo bajo nivel y deja la superficie libre, sin impacto visual en cocheras y residencias.</p><span class="more">Ver sistema</span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== TIPOS · CARRUSEL ===================== -->
 <section class="deep" id="tipos">
@@ -823,21 +1076,49 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
 
 <!-- ===================== QUIÉNES SOMOS ===================== -->
 <section class="deep" id="nosotros">
-  <div class="wrap two">
-    <div>
-      <p class="tag">30 años de experiencia</p>
-      <h2 class="sign" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-block:.9rem 1.2rem">Ingeniería que da confianza</h2>
-      <div class="stack" style="gap:1em">
-        <p class="lede">Somos una empresa dedicada al análisis, desarrollo y fabricación de dispositivos electro, hidráulico y neumáticos, así como de sistemas de estacionamientos apilables.</p>
-        <p class="lede">Nuestro objetivo es brindar a nuestros clientes la plena confianza de que cada equipo está fabricado con los más altos estándares de calidad y seguridad, usando siempre los mejores materiales y apoyándonos en marcas reconocidas a nivel mundial.</p>
-        <p class="lede">Nos especializamos en detectar y analizar causas y fallas, por mínimas que parezcan, para sugerir soluciones prácticas dentro de una cultura de mejora continua.</p>
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <p class="tag">Quiénes somos</p>
+        <h2 class="sign" style="font-size:clamp(1.9rem,4.3vw,2.8rem);margin-block:.85rem 1.2rem">Más de 30 años fabricando sistemas de estacionamiento</h2>
+        <div class="stack" style="gap:1em">
+          <p class="lede">Somos una empresa dedicada al análisis, desarrollo y fabricación de dispositivos electro, hidráulico y neumáticos, así como de sistemas de estacionamientos apilables.</p>
+          <p class="lede">Nuestro objetivo es brindar a nuestros clientes la plena confianza de que cada equipo está fabricado con los más altos estándares de calidad y seguridad, usando siempre los mejores materiales y apoyándonos en marcas reconocidas a nivel mundial.</p>
+          <p class="lede">Nos especializamos en detectar y analizar causas y fallas, por mínimas que parezcan, para sugerir soluciones prácticas dentro de una cultura de mejora continua.</p>
+        </div>
+        <dl class="data">
+          <div><dt>Vida útil de diseño</dt><dd>15 años</dd></div>
+          <div><dt>Garantía</dt><dd>2 años</dd></div>
+          <div><dt>Seguridad</dt><dd>Eléctrica, hidráulica y mecánica</dd></div>
+          <div><dt>Cobertura</dt><dd>Toda la República Mexicana</dd></div>
+        </dl>
+      </div>
+      <div class="about-shot">
+        <figure class="sheet photo"><img src="assets/drone_foto.jpg" alt="Instalación de un sistema de estacionamiento automatizado de Grupo DYS" loading="lazy"></figure>
+        <div class="years"><b>30+</b><span>Años de experiencia</span></div>
       </div>
     </div>
-    <div class="flow" style="grid-template-columns:1fr">
-      <div class="phase"><b>Problema</b><p>Faltan cajones de estacionamiento, no existe seguridad para las unidades de los clientes o del personal, y la superficie del inmueble está desaprovechada.</p></div>
-      <div class="phase"><b>Solución</b><p>Diseño, fabricación e instalación propia de cada sistema, con especificaciones a la medida del espacio y del presupuesto disponible.</p></div>
-      <div class="phase"><b>Respaldo</b><p>30 años de experiencia en electro, hidráulica y neumática aplicados a estacionamientos apilables, con mejora continua en cada proyecto.</p></div>
-    </div>
+  </div>
+</section>
+
+<!-- ===================== FRANJA · DEVOLUCIÓN DE LLAMADA ===================== -->
+<section class="strip dark" id="llamada">
+  <div class="wrap">
+    <h2>¿Prefiere que le llamemos nosotros?</h2>
+    <div class="dash"></div>
+    <p>Déjenos su número y un técnico se comunica para evaluar su espacio, resolver dudas y entregarle un presupuesto sin compromiso.</p>
+    <form class="lead-card" id="callForm" action="mailto:jalvarez@grupodys.com" method="post" enctype="text/plain"
+          style="max-width:640px;margin:2rem auto 0;text-align:left">
+      <div class="pair">
+        <div><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" type="text" required autocomplete="name"></div>
+        <div><label for="c-tel">Teléfono</label><input id="c-tel" name="telefono" type="tel" required autocomplete="tel"></div>
+      </div>
+      <label class="consent" for="c-ok">
+        <input type="checkbox" id="c-ok" name="privacidad" required>
+        <span>He leído y acepto la <a href="#privacidad">política de privacidad</a>.</span>
+      </label>
+      <button class="btn btn-act sub" type="submit">Solicitar llamada</button>
+    </form>
   </div>
 </section>
 
@@ -881,11 +1162,31 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
       <p class="tag">Cómo trabajamos</p>
       <h2>De la medida del espacio al sistema en operación</h2>
     </div>
-    <div class="flow">
-      <div class="phase"><b class="num">01</b><h3>Describa su espacio</h3><p>Largo, ancho y altura libre, número de vehículos y tipo de unidad. Una fotografía del lugar es suficiente para iniciar.</p></div>
-      <div class="phase"><b class="num">02</b><h3>Propuesta en menos de 24 h</h3><p>Sistema recomendado, capacidad, dimensiones finales e importe, dentro de las 24 horas hábiles siguientes.</p></div>
-      <div class="phase"><b class="num">03</b><h3>Fabricación a medida</h3><p>Se produce en la planta de San Juan del Río con materiales de marcas reconocidas a nivel mundial.</p></div>
-      <div class="phase"><b class="num">04</b><h3>Instalación y entrega</h3><p>Montaje en sitio, pruebas de carga, capacitación de uso e inicio de la garantía.</p></div>
+    <div class="steps3">
+      <div class="step3">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H7l-3 3z"/><path d="M8 9h8M8 12h5"/></svg></span>
+        <h3>Describa su espacio</h3>
+        <p>Largo, ancho y altura libre, número de vehículos y tipo de unidad. Una fotografía del lugar es suficiente para iniciar.</p>
+        <b>01</b>
+      </div>
+      <div class="step3">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+        <h3>Propuesta en menos de 24 h</h3>
+        <p>Sistema recomendado, capacidad, dimensiones finales e importe cerrado, dentro de las 24 horas hábiles siguientes.</p>
+        <b>02</b>
+      </div>
+      <div class="step3">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></span>
+        <h3>Fabricación a medida</h3>
+        <p>Se produce en la planta de San Juan del Río con materiales de marcas reconocidas a nivel mundial.</p>
+        <b>03</b>
+      </div>
+      <div class="step3">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7 10 17l-5-5"/></svg></span>
+        <h3>Instalación y entrega</h3>
+        <p>Montaje en sitio, pruebas de carga, capacitación de uso e inicio de la garantía.</p>
+        <b>04</b>
+      </div>
     </div>
   </div>
 </section>
@@ -897,7 +1198,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
       <p class="tag">Consultas frecuentes antes de cotizar</p>
       <h2>Preguntas frecuentes</h2>
     </div>
-    <div class="qs">
+    <div class="faq2">
       <details open>
         <summary>¿Cuánto tardan en responder una cotización?</summary>
         <p>Respondemos en menos de 24 horas hábiles a cada solicitud, con una propuesta concreta para el espacio indicado.</p>
@@ -926,61 +1227,125 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
   </div>
 </section>
 
+<!-- ===================== TESTIMONIOS =====================
+     PENDIENTE: no se dispone de reseñas reales de Grupo DYS. Las tres
+     tarjetas llevan texto de marcador y NO deben publicarse como si fueran
+     opiniones de clientes. Sustituir por reseñas verificables (Google
+     Business) o eliminar la seccion completa antes de salir a produccion. -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="mid">
+      <p class="tag">Testimonios</p>
+      <h2>Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="pending">
+      <b>Sección pendiente de contenido real</b>
+      No se recibieron reseñas de clientes de Grupo DYS. Las tarjetas siguientes son marcadores de maquetación, no opiniones reales, y deben reemplazarse por reseñas verificables antes de publicar el sitio. Si no hay reseñas disponibles, elimine esta sección completa: una sección de testimonios vacía o inventada resta credibilidad en lugar de sumarla.
+    </div>
+    <div class="quotes" aria-hidden="true">
+      <article class="quote">
+        <span class="stars">★★★★★</span>
+        <p>[Texto de la reseña del cliente. Sustituir por una opinión real y verificable.]</p>
+        <div class="who-said"><span class="av">—</span><span><b>[Nombre del cliente]</b><span>[Fecha] · [Origen]</span></span></div>
+      </article>
+      <article class="quote">
+        <span class="stars">★★★★★</span>
+        <p>[Texto de la reseña del cliente. Sustituir por una opinión real y verificable.]</p>
+        <div class="who-said"><span class="av">—</span><span><b>[Nombre del cliente]</b><span>[Fecha] · [Origen]</span></span></div>
+      </article>
+      <article class="quote">
+        <span class="stars">★★★★★</span>
+        <p>[Texto de la reseña del cliente. Sustituir por una opinión real y verificable.]</p>
+        <div class="who-said"><span class="av">—</span><span><b>[Nombre del cliente]</b><span>[Fecha] · [Origen]</span></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CONTACTO ===================== -->
 <section class="deepest" id="cotizar">
-  <div class="wrap reach">
-    <div>
-      <p class="tag">Solicitud de cotización</p>
-      <h2 style="margin-block:.9rem 1.2rem">¿Le faltan cajones de estacionamiento?</h2>
-      <p class="lede">Indíquenos las medidas de su espacio, el sistema de interés y el número de vehículos que necesita estacionar. Recibirá una propuesta en menos de 24 horas hábiles, sin compromiso.</p>
-      <dl class="data plain">
-        <div><dt>Teléfono</dt><dd><a href="tel:+524272014408">+52 1 427 201 4408</a></dd></div>
-        <div><dt>Correo</dt><dd><a href="mailto:jalvarez@grupodys.com">jalvarez@grupodys.com</a></dd></div>
-        <div><dt>Horario</dt><dd>Lun–Vie · 9:00 a 18:00</dd></div>
-        <div><dt>Dirección</dt><dd>Cadereyta No. 21, Col. Granjas Banthi,<br>San Juan del Río, Querétaro</dd></div>
-      </dl>
+  <div class="wrap">
+    <div class="mid">
+      <p class="tag">Contacto</p>
+      <h2>¿Le faltan cajones de estacionamiento?</h2>
+      <p class="lede" style="margin:1rem auto 0">Indíquenos las medidas de su espacio, el sistema de interés y el número de vehículos que necesita estacionar. Recibirá una propuesta en menos de 24 horas hábiles, sin compromiso.</p>
     </div>
 
-    <!-- TODO: sustituir action por el endpoint real (Formspree, backend propio).
-         mailto: depende del cliente de correo del visitante y pierde solicitudes. -->
-    <form id="quoteForm" action="mailto:jalvarez@grupodys.com" method="post" enctype="text/plain">
-      <div>
-        <label for="f-nombre">Nombre</label>
-        <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+    <div class="reach">
+      <div class="contact-card">
+        <h3>Hable hoy con un técnico de Grupo DYS</h3>
+        <dl class="cline">
+          <span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+          <div><dt>Número de teléfono</dt><dd><a href="tel:+524272014408">+52 1 427 201 4408</a></dd></div>
+        </dl>
+        <dl class="cline">
+          <span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7"  fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <div><dt>Correo</dt><dd><a href="mailto:jalvarez@grupodys.com">jalvarez@grupodys.com</a></dd></div>
+        </dl>
+        <dl class="cline">
+          <span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <div><dt>Dirección</dt><dd>Cadereyta No. 21, Col. Granjas Banthi,<br>San Juan del Río, Querétaro</dd></div>
+        </dl>
+        <dl class="cline">
+          <span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+          <div><dt>Horario</dt><dd>Lunes a viernes · 9:00 a 18:00</dd></div>
+        </dl>
       </div>
-      <div>
-        <label for="f-tel">Teléfono</label>
-        <input id="f-tel" name="telefono" type="tel" required autocomplete="tel" placeholder="+52 ...">
-      </div>
-      <div>
-        <label for="f-producto">Sistema de interés</label>
-        <select id="f-producto" name="producto">
-          <option value="">Seleccione una opción</option>
-          <option>Elevador para estacionamiento de carros (duplicador)</option>
-          <option>Torre de estacionamiento vertical automatizado</option>
-          <option>Elevador o rampa hidráulica para autos</option>
-          <option>Elevador para taller mecánico</option>
-          <option>Montacoches hidráulico</option>
-          <option>Sistema subterráneo SUBTERRA</option>
-          <option>Sistema Drone</option>
-        </select>
-      </div>
-      <div>
-        <label for="f-msg">Descripción del proyecto</label>
-        <textarea id="f-msg" name="mensaje" placeholder="Ejemplo: cochera de 6 × 3 m con 2.60 m de altura libre; se requiere estacionar 2 carros."></textarea>
-      </div>
-      <button class="btn btn-act sub" type="submit">Solicitar cotización</button>
-      <p class="fine">Respuesta en menos de 24 horas hábiles.</p>
-    </form>
+
+      <form id="quoteForm" action="mailto:jalvarez@grupodys.com" method="post" enctype="text/plain">
+        <div class="pair">
+          <div><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" required autocomplete="given-name"></div>
+          <div><label for="f-apellido">Apellidos</label><input id="f-apellido" name="apellidos" type="text" autocomplete="family-name"></div>
+        </div>
+        <div class="pair">
+          <div><label for="f-mail">Correo</label><input id="f-mail" name="correo" type="email" autocomplete="email"></div>
+          <div><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div>
+          <label for="f-producto">Sistema de interés</label>
+          <select id="f-producto" name="producto">
+            <option value="">Seleccione una opción</option>
+            <option>Elevador para estacionamiento de carros (duplicador)</option>
+            <option>Torre de estacionamiento vertical automatizado</option>
+            <option>Elevador o rampa hidráulica para autos</option>
+            <option>Elevador para taller mecánico</option>
+            <option>Montacoches hidráulico</option>
+            <option>Sistema subterráneo SUBTERRA</option>
+            <option>Sistema Drone</option>
+          </select>
+        </div>
+        <div>
+          <label for="f-msg">Descripción del proyecto</label>
+          <textarea id="f-msg" name="mensaje" placeholder="Ejemplo: cochera de 6 × 3 m con 2.60 m de altura libre; se requiere estacionar 2 carros."></textarea>
+        </div>
+        <label class="consent" for="f-ok">
+          <input type="checkbox" id="f-ok" name="privacidad" required>
+          <span>He leído y acepto la <a href="#privacidad">política de privacidad</a>.</span>
+        </label>
+        <button class="btn btn-act sub" type="submit">Solicitar cotización</button>
+        <p class="fine">Respuesta en menos de 24 horas hábiles.</p>
+      </form>
+    </div>
   </div>
 </section>
 
 </main>
 
+<!-- TODO: los tres enlaces legales apuntan a marcadores. Enlazar los
+     documentos reales antes de publicar; un formulario que pide datos
+     personales con una politica de privacidad inexistente no es publicable. -->
 <footer>
   <div class="wrap foot">
     <span>© <span id="y">2026</span> Grupo DYS S.A. de C.V. · iaDys — Estacionamientos verticales inteligentes</span>
-    <span class="num">San Juan del Río, Querétaro, México</span>
+    <nav class="foot-links" aria-label="Legal">
+      <a href="#aviso-legal">Aviso legal</a>
+      <a href="#cookies">Política de cookies</a>
+      <a href="#privacidad">Política de privacidad</a>
+    </nav>
+  </div>
+  <div class="wrap foot" style="margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--rule)">
+    <span class="num">Cadereyta No. 21, Col. Granjas Banthi · San Juan del Río, Querétaro, México</span>
+    <span class="num">Lun–Vie 9:00–18:00 · +52 1 427 201 4408</span>
   </div>
 </footer>
 
