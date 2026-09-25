@@ -19,286 +19,283 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+/* ============================================================
+   Grupo DYS · iaDys
+   Identidad heredada de grupodys.com (paleta y marca fijadas
+   por el cliente). Tema oscuro único y deliberado: el navy es
+   la marca, no una preferencia de sistema. Todos los colores
+   se declaran de forma explícita.
+   ============================================================ */
 :root{
-  --navy-900:#080F39;
-  --navy-800:#0B1644;
-  --navy-700:#0F1D4F;
-  --navy-600:#16255E;
-  --navy-500:#25356F;
-  --line:rgba(140,165,220,.22);
-  --red:#C12318;
-  --red-hi:#D92A1D;
-  --gold:#F2B01D;
-  --gold-soft:#F7C85A;
+  color-scheme:dark;
+
+  /* profundidades de navy — de fondo a superficie elevada */
+  --d-900:#060C2E;
+  --d-800:#080F39;
+  --d-700:#0B1644;
+  --d-600:#101E52;
+  --d-500:#16255E;
+
+  /* acción: rojo, y solo rojo. No se usa para nada más. */
+  --act:#C12318;
+  --act-hi:#D92A1D;
+
+  /* dato técnico: oro, y solo oro. Cotas, capacidades, cifras. */
+  --tec:#F2B01D;
+
+  /* neutros sesgados al azul de la marca */
   --ink:#FFFFFF;
-  --ink-soft:#BFCAE6;
-  --ink-mute:#8E9CC4;
-  --panel:#EEF1F7;
-  --display:'Barlow Condensed','Archivo',system-ui,sans-serif;
-  --body:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --max:1180px;
-  --pad:clamp(16px,4vw,40px);
+  --ink-2:#C3CEE8;
+  --ink-3:#8E9CC4;
+  --ink-4:#5D6B96;
+  --rule:rgba(142,156,196,.22);
+  --rule-2:rgba(142,156,196,.38);
+
+  /* panel claro = hoja de especificación */
+  --paper:#EEF1F7;
+
+  --sign:'Barlow Condensed','Arial Narrow',system-ui,sans-serif;
+  --text:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --data:'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+
+  --max:1200px;
+  --gut:clamp(16px,4vw,44px);
+  --bar:70px;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--bar) + 8px);-webkit-text-size-adjust:100%}
 body{
-  margin:0;background:var(--navy-800);color:var(--ink);
-  font-family:var(--body);font-size:16px;line-height:1.65;
+  margin:0;background:var(--d-700);color:var(--ink);
+  font-family:var(--text);font-size:16px;line-height:1.62;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-img{max-width:100%;display:block;height:auto}
-a{color:inherit}
-h1,h2,h3{margin:0;line-height:1.06;letter-spacing:-.015em;font-weight:800}
-p{margin:0 0 1em}
-p:last-child{margin-bottom:0}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.02;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
 
-.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
-.eyebrow{
-  font-family:var(--display);font-size:.8rem;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .9rem
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.stack{display:grid}
+
+/* ---------- roles tipográficos ---------- */
+.sign{font-family:var(--sign);letter-spacing:-.005em}
+.tag{
+  font-family:var(--data);font-size:.68rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--tec);margin:0
 }
-.lead{color:var(--ink-soft);font-size:1.05rem;max-width:62ch}
+.tag.q{color:var(--ink-4)}
+.lede{color:var(--ink-2);font-size:1.04rem;max-width:64ch}
+.num{font-family:var(--data);font-variant-numeric:tabular-nums}
 
-/* ---------- buttons ---------- */
+/* ---------- acción ---------- */
 .btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:var(--display);font-size:.95rem;font-weight:700;
-  letter-spacing:.11em;text-transform:uppercase;text-decoration:none;
-  padding:.95rem 1.6rem;border:1px solid transparent;border-radius:2px;
-  cursor:pointer;transition:transform .15s ease,background .15s ease,color .15s ease;
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:var(--sign);font-size:1rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:.9rem 1.7rem;border:1px solid transparent;border-radius:1px;
+  cursor:pointer;transition:background .16s,color .16s,border-color .16s
 }
-.btn:hover{transform:translateY(-2px)}
-.btn-red{background:var(--red);color:#fff}
-.btn-red:hover{background:var(--red-hi)}
-.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
-.btn-ghost:hover{background:#fff;color:var(--navy-800)}
-.btn-white{background:#fff;color:var(--navy-800)}
-.btn-white:hover{background:var(--gold)}
+.btn-act{background:var(--act);color:#fff}
+.btn-act:hover{background:var(--act-hi)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--rule-2)}
+.btn-line:hover{border-color:var(--ink);background:rgba(255,255,255,.05)}
 :where(a,button,input,select,textarea,summary):focus-visible{
-  outline:2px solid var(--gold);outline-offset:3px
+  outline:2px solid var(--tec);outline-offset:3px
 }
 
-/* ---------- header ---------- */
-.site-head{
-  position:sticky;top:0;z-index:60;
-  background:rgba(8,15,57,.93);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
+/* ---------- barra superior ---------- */
+.bar{
+  position:sticky;top:0;z-index:60;background:rgba(6,12,46,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)
 }
-.head-in{display:flex;align-items:center;gap:1.2rem;min-height:70px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;margin-right:auto}
-.brand img{width:38px;height:38px;border-radius:5px;object-fit:cover}
-.brand b{font-family:var(--display);font-size:1.22rem;font-weight:700;letter-spacing:.02em;display:block;line-height:1}
-.brand-txt{display:block}
-.brand-txt em{
-  display:block;white-space:nowrap;font-style:normal;font-family:var(--display);font-size:.6rem;font-weight:600;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:3px
+.bar-in{display:flex;align-items:center;gap:1.1rem;min-height:var(--bar)}
+.mark{display:flex;align-items:center;gap:.65rem;text-decoration:none;margin-right:auto}
+.mark img{width:36px;height:36px;border-radius:4px}
+.mark b{font-family:var(--sign);font-size:1.2rem;font-weight:700;display:block;line-height:1;color:var(--ink)}
+.mark i{
+  display:block;font-style:normal;font-family:var(--data);font-size:.56rem;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--tec);margin-top:4px;white-space:nowrap
 }
-.nav{display:flex;gap:1.35rem;align-items:center}
-.nav a{
-  text-decoration:none;font-size:.88rem;color:var(--ink-soft);white-space:nowrap;
-  padding:.35rem 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s
+.menu{display:flex;gap:1.4rem;align-items:center}
+.menu a{
+  text-decoration:none;font-size:.85rem;color:var(--ink-2);white-space:nowrap;
+  padding:.3rem 0;border-bottom:1px solid transparent;transition:color .16s,border-color .16s
 }
-.nav a:hover{color:#fff;border-color:var(--gold)}
-.head-cta{padding:.7rem 1.15rem;font-size:.8rem}
-.nav-cta{display:none}
-.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:3px;
-  color:#fff;padding:.5rem .7rem;font-size:1.1rem;cursor:pointer;line-height:1}
+.menu a:hover{color:var(--ink);border-color:var(--tec)}
+.bar .btn{padding:.62rem 1.1rem;font-size:.85rem}
+.burger{
+  display:none;background:none;border:1px solid var(--rule-2);border-radius:2px;
+  color:var(--ink);padding:.45rem .65rem;font-size:1.05rem;line-height:1;cursor:pointer
+}
+.menu .btn{display:none}
 
-@media (max-width:1040px){
-  .nav-toggle{display:block;order:3}
-  .nav{
-    position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
-    gap:0;background:var(--navy-900);border-bottom:1px solid var(--line);
-    padding:.5rem var(--pad) 1.2rem;display:none
+@media (max-width:1060px){
+  .burger{display:block;order:3}
+  .bar>.wrap>.btn{display:none}
+  .menu{
+    position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;
+    align-items:stretch;gap:0;background:var(--d-900);border-bottom:1px solid var(--rule);
+    padding:.25rem var(--gut) 1.3rem
   }
-  .nav.open{display:flex}
-  .nav a{padding:.85rem 0;border-bottom:1px solid var(--line);white-space:normal}
-  .nav a.nav-cta{display:inline-flex;justify-content:center;margin-top:1rem;border-bottom:0;padding:.95rem 1.6rem}
-  .head-cta{display:none}
+  .menu.on{display:flex}
+  .menu a{padding:.9rem 0;border-bottom:1px solid var(--rule);white-space:normal}
+  .menu .btn{display:inline-flex;justify-content:center;margin-top:1.1rem;border-bottom:0}
 }
 
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;padding:clamp(3.5rem,9vw,6.5rem) 0 clamp(3rem,7vw,5rem)}
+/* ---------- portada ---------- */
+.hero{position:relative;overflow:hidden;padding-block:clamp(3.2rem,8vw,5.6rem) clamp(2.4rem,6vw,4rem)}
 .hero::before{
-  content:"";position:absolute;inset:0;z-index:0;
+  content:"";position:absolute;inset:0;
   background:
-    radial-gradient(760px 520px at 78% 38%, rgba(88,74,190,.34), transparent 62%),
-    radial-gradient(620px 460px at 8% 0%, rgba(22,37,94,.85), transparent 66%);
+    radial-gradient(720px 500px at 76% 40%,rgba(92,76,196,.30),transparent 62%),
+    radial-gradient(640px 420px at 4% -10%,rgba(22,37,94,.9),transparent 68%)
 }
-.hero-grid{
-  position:relative;z-index:1;display:grid;gap:clamp(2rem,5vw,3.5rem);
-  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center
-}
-.hero h1{font-size:clamp(2.3rem,6.2vw,4.1rem)}
-.hero h1 em{font-style:normal;color:var(--gold);display:block}
-.hero .lead{margin:1.4rem 0 2rem;font-size:clamp(1rem,1.9vw,1.12rem)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.85rem}
+.hero>*{position:relative}
+.hero-in{display:grid;gap:clamp(1.8rem,5vw,3.4rem);grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);align-items:center}
+.hero h1{font-family:var(--sign);font-size:clamp(2.5rem,6.6vw,4.4rem);margin-block:1rem 1.3rem}
+.hero h1 em{font-style:normal;color:var(--tec);display:block}
+.hero .lede{font-size:clamp(1rem,1.8vw,1.1rem)}
+.hero-act{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
 
-.emblem{position:relative;justify-self:center;width:min(100%,400px);aspect-ratio:1}
-.emblem img{
-  position:relative;z-index:2;width:100%;border-radius:50%;
-  box-shadow:0 30px 70px rgba(0,0,0,.55)
-}
-.emblem::after{
-  content:"";position:absolute;inset:-9%;border-radius:50%;
-  border:1px solid rgba(180,170,255,.3);
-  box-shadow:0 0 90px 22px rgba(96,80,200,.3) inset
+.badge{position:relative;justify-self:center;width:min(100%,380px);aspect-ratio:1}
+.badge img{width:100%;border-radius:50%;box-shadow:0 26px 64px rgba(0,0,0,.55)}
+.badge::after{
+  content:"";position:absolute;inset:-8%;border-radius:50%;
+  border:1px solid rgba(178,168,255,.26);box-shadow:inset 0 0 84px 20px rgba(96,80,200,.26)
 }
 
-.stats{
-  position:relative;z-index:1;display:grid;gap:1.5rem;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  margin-top:clamp(2.4rem,5vw,3.4rem);padding-top:2rem;border-top:1px solid var(--line)
+/* cifras: mono, tabulares, oro */
+.figs{
+  display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  margin-top:clamp(2.2rem,5vw,3.2rem);padding-top:1.9rem;border-top:1px solid var(--rule)
 }
-.stat b{display:block;font-family:var(--display);font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1}
-.stat span{
-  display:block;margin-top:.45rem;font-family:var(--display);font-size:.75rem;font-weight:600;
-  letter-spacing:.17em;text-transform:uppercase;color:var(--ink-mute)
+.fig b{display:block;font-family:var(--data);font-variant-numeric:tabular-nums;
+  font-size:2.15rem;font-weight:600;color:var(--tec);line-height:1;letter-spacing:-.03em}
+.fig span{display:block;margin-top:.5rem;font-family:var(--data);font-size:.66rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ---------- ritmo de secciones ---------- */
+section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
+.deep{background:var(--d-800)}
+.deepest{background:var(--d-900)}
+.head{max-width:66ch;margin-bottom:clamp(1.9rem,4vw,2.8rem);display:grid;gap:.9rem}
+.head h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.85rem)}
+
+/* ---------- unidad destacada ---------- */
+.feat{display:grid;gap:clamp(1.5rem,4vw,2.8rem);grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center}
+.feat h3{font-family:var(--sign);font-size:clamp(1.3rem,2.7vw,1.75rem);margin-bottom:.7rem}
+.feat p{color:var(--ink-2);font-size:.97rem}
+
+/* panel claro: la foto de producto vive sobre hoja de ficha */
+.sheet{position:relative;background:var(--paper);padding:20px;border-radius:2px}
+.sheet img{width:100%;aspect-ratio:16/10;object-fit:contain;mix-blend-mode:multiply}
+.sheet::before,.sheet::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--tec)}
+.sheet::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.sheet::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.sheet.photo img{mix-blend-mode:normal;aspect-ratio:16/9;object-fit:cover}
+.sheet figcaption{
+  margin-top:14px;font-family:var(--data);font-size:.64rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-4)
 }
 
-/* ---------- sections ---------- */
-section{padding:clamp(3.2rem,7vw,5.2rem) 0;border-top:1px solid var(--line)}
-.sec-head{margin-bottom:clamp(2rem,4vw,3rem)}
-.sec-head h2{font-size:clamp(1.85rem,4.2vw,2.9rem);max-width:20ch}
-.sec-head .lead{margin-top:1.1rem}
-.alt{background:var(--navy-900)}
+/* ---------- variantes: más chicas, sin caja ---------- */
+.vars{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:clamp(2rem,4vw,2.8rem)}
+.var{display:flex;flex-direction:column;gap:.9rem;padding-top:1.1rem;border-top:2px solid var(--rule-2);transition:border-color .16s}
+.var-shot{margin:auto 0 0}
+.var:hover{border-top-color:var(--tec)}
+.var h3{font-family:var(--sign);font-size:1.12rem}
+.var p{color:var(--ink-3);font-size:.89rem}
+.var .sheet{padding:13px}
+.var .sheet img{aspect-ratio:16/10}
 
-/* ---------- product cards ---------- */
-.cards{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{
-  display:flex;flex-direction:column;background:var(--navy-700);
-  border:1px solid var(--line);border-radius:4px;overflow:hidden;
-  transition:transform .18s ease,border-color .18s ease
-}
-.card:hover{transform:translateY(-4px);border-color:rgba(242,176,29,.5)}
-.card-body{padding:1.3rem 1.3rem .4rem}
-.card h3{
-  font-family:var(--display);font-size:1.02rem;font-weight:700;
-  letter-spacing:.07em;text-transform:uppercase;margin-bottom:.6rem
-}
-.card p{color:var(--ink-soft);font-size:.9rem}
-.shot{position:relative;margin:1.1rem 1.3rem;padding:12px;background:var(--panel);border-radius:2px}
-.shot img{width:100%;aspect-ratio:16/10;object-fit:contain;mix-blend-mode:multiply}
-.shot::before,.shot::after{
-  content:"";position:absolute;width:15px;height:15px;border:2px solid var(--gold)
-}
-.shot::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
-.shot::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
-.card-foot{margin-top:auto;padding:0 1.3rem 1.3rem;display:flex;justify-content:flex-end}
-.more{
-  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;
-  font-family:var(--display);font-size:.78rem;font-weight:700;letter-spacing:.13em;
-  text-transform:uppercase;padding:.6rem 1.05rem;border:1px solid rgba(255,255,255,.4);border-radius:2px;
-  transition:background .15s,color .15s
-}
-.more:hover{background:#fff;color:var(--navy-800)}
+/* ---------- listas ---------- */
+.pts{display:grid;gap:.8rem;margin-top:1.5rem}
+.pts li{position:relative;padding-left:1.7rem;color:var(--ink-2);font-size:.95rem}
+.pts li::before{content:"";position:absolute;left:1px;top:.55em;width:8px;height:8px;background:var(--tec);transform:rotate(45deg)}
+.pts b{color:var(--ink);font-weight:600}
+.nos{display:grid;gap:.8rem;margin-top:1.5rem}
+.nos li{position:relative;padding-left:1.7rem;color:var(--ink-3);font-size:.95rem}
+.nos li::before{content:"\00d7";position:absolute;left:0;top:-.08em;color:var(--act-hi);font-size:1.3rem;font-weight:700}
+.nos b{color:var(--ink-2);font-weight:600}
+.two{display:grid;gap:clamp(1.8rem,5vw,3.2rem);grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.two h3{font-family:var(--data);font-size:.72rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase}
+.si h3{color:var(--tec)}
+.no h3{color:var(--ink-4)}
 
-/* ---------- feature split ---------- */
-.split{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center}
-.steps{display:grid;gap:1.6rem}
-.step{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;padding-left:1.3rem;border-left:1px solid var(--line)}
-.step b{font-family:var(--display);font-size:1.3rem;color:var(--gold);line-height:1}
-.step h3{
-  font-family:var(--display);font-size:.9rem;font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;margin-bottom:.4rem
-}
-.step p{color:var(--ink-soft);font-size:.92rem}
+/* ---------- tabla de datos ---------- */
+.data{margin-top:1.7rem;border-top:1px solid var(--rule)}
+.data div{display:flex;justify-content:space-between;gap:1.4rem;padding-block:.78rem;border-bottom:1px solid var(--rule)}
+.data dt{margin:0;font-family:var(--data);font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3)}
+.data dd{margin:0;font-family:var(--data);font-size:.85rem;font-weight:500;font-variant-numeric:tabular-nums;color:var(--tec);text-align:right}
+.data dd a{color:inherit;text-decoration:none}
+.data dd a:hover{text-decoration:underline}
+.data.plain dd{color:var(--ink)}
 
-/* ---------- spec table ---------- */
-.spec{border-top:1px solid var(--line);margin-top:1.8rem}
-.spec div{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
-.spec dt{
-  font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--ink-mute);margin:0
+/* ---------- alzado técnico ---------- */
+.draw{margin-top:clamp(1.6rem,4vw,2.4rem);overflow-x:auto}
+.draw svg{display:block;min-width:660px;width:100%;height:auto}
+.draw-note{
+  margin-top:1.1rem;font-family:var(--data);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-4)
 }
-.spec dd{margin:0;font-size:.9rem;font-weight:600;color:var(--gold);text-align:right}
 
-/* ---------- checklist ---------- */
-.checks{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.85rem}
-.checks li{position:relative;padding-left:1.8rem;color:var(--ink-soft);font-size:.95rem}
-.checks li::before{
-  content:"";position:absolute;left:0;top:.52em;width:9px;height:9px;
-  background:var(--gold);transform:rotate(45deg)
-}
-.checks b{color:#fff;font-weight:700}
+/* ---------- proceso ---------- */
+.flow{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.phase{display:grid;gap:.55rem;align-content:start;padding-left:1.2rem;border-left:1px solid var(--rule)}
+.phase b{font-family:var(--data);font-size:.8rem;font-weight:600;color:var(--tec);letter-spacing:.06em}
+.phase h3{font-family:var(--sign);font-size:1.12rem}
+.phase p{color:var(--ink-3);font-size:.9rem}
 
-.crosses{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.85rem}
-.crosses li{position:relative;padding-left:1.8rem;color:var(--ink-mute);font-size:.95rem}
-.crosses li::before{
-  content:"\00d7";position:absolute;left:.1rem;top:-.05em;
-  color:var(--red-hi);font-size:1.25rem;font-weight:700;line-height:1.4
-}
-.crosses b{color:var(--ink-soft);font-weight:700}
-.scope{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
-.scope h3{
-  font-family:var(--display);font-size:.92rem;font-weight:700;letter-spacing:.15em;
-  text-transform:uppercase
-}
-.scope .yes h3{color:var(--gold)}
-.scope .no h3{color:var(--ink-mute)}
-
-/* ---------- faq ---------- */
-.faq{display:grid;gap:.7rem;max-width:840px}
-details{background:var(--navy-700);border:1px solid var(--line);border-radius:3px}
+/* ---------- preguntas ---------- */
+.qs{display:grid;gap:.55rem;max-width:860px}
+details{border-bottom:1px solid var(--rule)}
 summary{
-  display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
-  padding:1.1rem 1.3rem;cursor:pointer;font-weight:600;font-size:.98rem;list-style:none
+  display:flex;justify-content:space-between;align-items:center;gap:1.4rem;
+  padding-block:1.05rem;cursor:pointer;font-weight:600;font-size:.98rem;list-style:none
 }
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);font-size:1.35rem;line-height:1;flex:none}
-details[open] summary::after{content:"−"}
-details p{padding:0 1.3rem 1.2rem;color:var(--ink-soft);font-size:.94rem;margin:0}
+summary::after{content:"+";font-family:var(--data);color:var(--tec);font-size:1.2rem;line-height:1;flex:none}
+details[open] summary::after{content:"\2212"}
+details p{padding-bottom:1.15rem;color:var(--ink-2);font-size:.93rem;max-width:62ch}
 
-/* ---------- contact ---------- */
-.contact{background:var(--navy-900)}
-.contact-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.contact h2{font-size:clamp(1.85rem,4.2vw,2.7rem)}
-.dl{margin:2rem 0 0}
-.dl div{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
-.dl dt{
-  font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--ink-mute);margin:0
-}
-.dl dd{margin:0;font-size:.93rem;font-weight:600;text-align:right}
-.dl dd a{text-decoration:none}
-.dl dd a:hover{color:var(--gold)}
-
-form{display:grid;gap:1.05rem}
+/* ---------- contacto ---------- */
+.reach{display:grid;gap:clamp(2rem,5vw,3.4rem);grid-template-columns:repeat(auto-fit,minmax(295px,1fr))}
+.reach h2{font-family:var(--sign);font-size:clamp(1.9rem,4.3vw,2.7rem)}
+form{display:grid;gap:1rem}
 label{
-  display:block;font-family:var(--display);font-size:.74rem;font-weight:600;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem
+  display:block;font-family:var(--data);font-size:.64rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--tec);margin-bottom:.42rem
 }
 input,select,textarea{
-  width:100%;background:var(--navy-700);border:1px solid var(--line);border-radius:2px;
-  color:#fff;font-family:var(--body);font-size:.95rem;padding:.8rem .9rem
+  width:100%;background:var(--d-600);border:1px solid var(--rule);border-radius:1px;
+  color:var(--ink);font-family:var(--text);font-size:.95rem;padding:.78rem .88rem
 }
-textarea{min-height:120px;resize:vertical}
-input::placeholder,textarea::placeholder{color:#6F7CA6}
-.form-note{font-family:var(--display);font-size:.74rem;font-weight:600;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-mute)}
-.btn-submit{width:100%;justify-content:center}
+input:focus,select:focus,textarea:focus{border-color:var(--rule-2)}
+textarea{min-height:118px;resize:vertical}
+::placeholder{color:var(--ink-4)}
+.sub{width:100%;justify-content:center}
+.fine{font-family:var(--data);font-size:.64rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
 
-/* ---------- footer ---------- */
-footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 0;font-size:.85rem;color:var(--ink-mute)}
-.foot-in{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.9rem;font-size:.82rem;color:var(--ink-3)}
+.foot{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:space-between;align-items:center}
 
-/* ---------- whatsapp float ---------- */
+/* ---------- WhatsApp ---------- */
 .wa{
-  position:fixed;right:18px;bottom:18px;z-index:70;width:56px;height:56px;border-radius:50%;
-  background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.45);
-  transition:transform .18s ease
+  position:fixed;right:16px;bottom:16px;z-index:70;width:54px;height:54px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;box-shadow:0 9px 24px rgba(0,0,0,.45);
+  transition:transform .16s
 }
-.wa:hover{transform:scale(1.08)}
-.wa svg{width:30px;height:30px;fill:#fff}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:29px;height:29px;fill:#fff}
 
-@media (max-width:820px){
-  .hero-grid{grid-template-columns:1fr}
-  .emblem{order:-1;width:min(74%,290px)}
-  .dl dd,.spec dd{text-align:left}
-  .dl div,.spec div{flex-direction:column;gap:.25rem}
+@media (max-width:860px){
+  .hero-in,.feat{grid-template-columns:1fr}
+  .badge{order:-1;width:min(72%,280px)}
+  .data div{flex-direction:column;gap:.2rem}
+  .data dd{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -307,91 +304,187 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
 </head>
 <body>
 
-<header class="site-head">
-  <div class="wrap head-in">
-    <a class="brand" href="#top">
-      <img src="assets/favicon.png" alt="" width="38" height="38">
-      <span class="brand-txt">
-        <b>Grupo DYS</b>
-        <em>Sistemas automatizados</em>
-      </span>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="mark" href="#top">
+      <img src="assets/favicon.png" alt="" width="36" height="36">
+      <span><b>Grupo DYS</b><i>Sistemas automatizados</i></span>
     </a>
-    <nav class="nav" id="nav" aria-label="Principal">
+    <nav class="menu" id="menu" aria-label="Principal">
       <a href="#elevadores-carro">Elevadores para autos</a>
       <a href="#estacionamiento">Estacionamiento</a>
       <a href="#torres">Torres</a>
       <a href="#rampas">Rampas</a>
       <a href="#taller">Taller mecánico</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-red nav-cta" href="#cotizar">Cotizar proyecto</a>
+      <a href="#faq">Preguntas</a>
+      <a class="btn btn-act" href="#cotizar">Cotizar proyecto</a>
     </nav>
-    <a class="btn btn-red head-cta" href="#cotizar">Cotizar proyecto</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">☰</button>
+    <a class="btn btn-act" href="#cotizar">Cotizar proyecto</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
   </div>
 </header>
 
 <main id="top">
 
-<!-- ================= HERO ================= -->
+<!-- ===================== PORTADA ===================== -->
 <div class="hero">
   <div class="wrap">
-    <div class="hero-grid">
+    <div class="hero-in">
       <div>
-        <p class="eyebrow">Grupo DYS · iaDys · México</p>
+        <p class="tag">Grupo DYS · iaDys · México</p>
         <h1>Elevadores de autos para estacionamiento <em>y taller mecánico</em></h1>
-        <p class="lead">Duplicadores de estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado y rampas hidráulicas para autos. Equipo nuevo de fabricación propia, calculado sobre las medidas de tu espacio.</p>
-        <div class="hero-cta">
-          <a class="btn btn-red" href="#cotizar">Cotizar mi proyecto</a>
-          <a class="btn btn-ghost" href="#estacionamiento">Ver productos</a>
+        <p class="lede">Duplicadores de estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado y rampas hidráulicas para autos. Equipo nuevo de fabricación propia, calculado sobre las medidas de tu espacio.</p>
+        <div class="hero-act">
+          <a class="btn btn-act" href="#cotizar">Cotizar mi proyecto</a>
+          <a class="btn btn-line" href="#geometria">Ver cómo gana espacio</a>
         </div>
       </div>
-      <figure class="emblem" style="margin:0">
-        <img src="assets/logo-iadys.png" alt="iaDys — estacionamientos verticales inteligentes de Grupo DYS" width="400" height="400">
+      <figure class="badge">
+        <img src="assets/logo-iadys.png" alt="iaDys — estacionamientos verticales inteligentes de Grupo DYS" width="380" height="380">
       </figure>
     </div>
 
-    <div class="stats">
-      <div class="stat"><b>30</b><span>Años de experiencia</span></div>
-      <div class="stat"><b>&lt;24h</b><span>Respuesta a cotización</span></div>
-      <div class="stat"><b>100%</b><span>Diseño a medida</span></div>
-      <div class="stat"><b>15</b><span>Años de vida útil</span></div>
+    <div class="figs">
+      <div class="fig"><b>30</b><span>Años de experiencia</span></div>
+      <div class="fig"><b>&lt;24 h</b><span>Respuesta a cotización</span></div>
+      <div class="fig"><b>15</b><span>Años de vida útil</span></div>
+      <div class="fig"><b>2</b><span>Años de garantía</span></div>
     </div>
   </div>
 </div>
 
-<!-- ================= CONFIANZA ================= -->
-<section class="alt" id="nosotros">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">30 años de experiencia</p>
-      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem)">Ingeniería que da confianza</h2>
-      <p class="lead" style="margin-top:1.2rem">Somos una empresa dedicada al análisis, desarrollo y fabricación de dispositivos electro, hidráulico y neumáticos, así como de sistemas de estacionamientos apilables.</p>
-      <p class="lead">Nuestro objetivo es brindar a nuestros clientes la plena confianza de que cada equipo está fabricado con los más altos estándares de calidad y seguridad, usando siempre los mejores materiales y apoyándonos en marcas reconocidas a nivel mundial.</p>
-      <p class="lead">Nos especializamos en detectar y analizar causas y fallas, por mínimas que parezcan, para sugerir soluciones prácticas dentro de una cultura de mejora continua.</p>
+<!-- ===================== ALZADO TÉCNICO =====================
+     El dibujo muestra geometría, no especificaciones: la altura
+     libre y la capacidad se calculan por proyecto. No añadir cotas
+     numéricas aquí sin datos confirmados por el cliente. -->
+<section class="deep" id="geometria">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag">Alzado comparativo</p>
+      <h2>Tres maneras de meter más autos en el mismo terreno</h2>
+      <p class="lede">La huella en planta no cambia. Lo que cambia es cuántas veces la aprovechas hacia arriba. Este es el criterio con el que se elige sistema antes de hablar de precio.</p>
     </div>
-    <div class="steps">
-      <div class="step"><b>01</b><div><h3>Problema</h3><p>Faltan cajones de estacionamiento, no hay seguridad para las unidades de tus clientes o empleados, y el espacio de tu hogar o negocio está desaprovechado.</p></div></div>
-      <div class="step"><b>02</b><div><h3>Solución</h3><p>Diseño, fabricación e instalación propia de cada sistema, con especificaciones a la medida de tu espacio y de tu presupuesto.</p></div></div>
-      <div class="step"><b>03</b><div><h3>Respaldo</h3><p>30 años de experiencia en electro, hidráulica y neumática aplicados a estacionamientos apilables, con mejora continua en cada proyecto.</p></div></div>
+
+    <div class="draw">
+      <svg viewBox="0 0 960 430" role="img" aria-labelledby="dt dd">
+        <title id="dt">Alzado comparativo de tres sistemas de estacionamiento</title>
+        <desc id="dd">Sobre la misma huella de un cajón: un cajón sencillo aloja un auto, un duplicador aloja dos autos apilados, y una torre de estacionamiento vertical aloja cuatro o más autos en niveles sucesivos.</desc>
+
+        <defs>
+          <g id="auto">
+            <rect x="2" y="20" width="116" height="14" rx="4" fill="#C3CEE8"/>
+            <path d="M26 20 L44 9 L76 9 L94 20 Z" fill="#8E9CC4"/>
+            <path d="M31 19 L46 12 L58 12 L58 19 Z" fill="#101E52"/>
+            <path d="M63 12 L74 12 L88 19 L63 19 Z" fill="#101E52"/>
+            <circle cx="32" cy="36" r="7" fill="#5D6B96"/>
+            <circle cx="92" cy="36" r="7" fill="#5D6B96"/>
+          </g>
+          <g id="plat">
+            <rect x="-4" y="0" width="128" height="7" rx="1" fill="#F2B01D"/>
+            <rect x="0" y="7" width="6" height="14" fill="#C12318"/>
+            <rect x="114" y="7" width="6" height="14" fill="#C12318"/>
+          </g>
+        </defs>
+
+        <!-- ---- columna 1: cajón sencillo ---- -->
+        <g transform="translate(40 0)">
+          <text x="0" y="26" font-family="'IBM Plex Mono',monospace" font-size="13" font-weight="600" fill="#8E9CC4" letter-spacing="2">CAJÓN SENCILLO</text>
+          <text x="0" y="46" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#5D6B96">1 auto</text>
+          <use href="#auto" x="20" y="333"/>
+          <line x1="0" y1="376" x2="160" y2="376" stroke="#5D6B96" stroke-width="2"/>
+          <line x1="0" y1="376" x2="0" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="160" y1="376" x2="160" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="0" y1="390" x2="160" y2="390" stroke="#5D6B96" stroke-width="1"/>
+          <text x="80" y="414" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#5D6B96">huella de 1 cajón</text>
+        </g>
+
+        <!-- ---- columna 2: duplicador ---- -->
+        <g transform="translate(320 0)">
+          <text x="0" y="26" font-family="'IBM Plex Mono',monospace" font-size="13" font-weight="600" fill="#F2B01D" letter-spacing="2">DUPLICADOR</text>
+          <text x="0" y="46" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#8E9CC4">2 autos · misma huella</text>
+          <use href="#auto" x="20" y="333"/>
+          <use href="#plat" x="16" y="255"/>
+          <use href="#auto" x="20" y="212"/>
+          <line x1="0" y1="376" x2="160" y2="376" stroke="#5D6B96" stroke-width="2"/>
+          <line x1="0" y1="376" x2="0" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="160" y1="376" x2="160" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="0" y1="390" x2="160" y2="390" stroke="#5D6B96" stroke-width="1"/>
+          <text x="80" y="414" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#5D6B96">huella de 1 cajón</text>
+          <!-- cota vertical -->
+          <line x1="196" y1="232" x2="196" y2="376" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="232" x2="202" y2="232" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="376" x2="202" y2="376" stroke="#F2B01D" stroke-width="1"/>
+          <text x="208" y="302" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">altura</text>
+          <text x="208" y="316" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">libre</text>
+        </g>
+
+        <!-- ---- columna 3: torre vertical ---- -->
+        <g transform="translate(640 0)">
+          <text x="0" y="26" font-family="'IBM Plex Mono',monospace" font-size="13" font-weight="600" fill="#F2B01D" letter-spacing="2">TORRE VERTICAL</text>
+          <text x="0" y="46" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#8E9CC4">4+ autos · misma huella</text>
+          <rect x="6" y="58" width="6" height="318" fill="#16255E"/>
+          <rect x="138" y="58" width="6" height="318" fill="#16255E"/>
+          <use href="#auto" x="20" y="333"/>
+          <use href="#plat" x="16" y="255"/>
+          <use href="#auto" x="20" y="212"/>
+          <use href="#plat" x="16" y="180"/>
+          <use href="#auto" x="20" y="137"/>
+          <use href="#plat" x="16" y="105"/>
+          <use href="#auto" x="20" y="62"/>
+          <line x1="0" y1="376" x2="160" y2="376" stroke="#5D6B96" stroke-width="2"/>
+          <line x1="0" y1="376" x2="0" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="160" y1="376" x2="160" y2="396" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="0" y1="390" x2="160" y2="390" stroke="#5D6B96" stroke-width="1"/>
+          <text x="80" y="414" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#5D6B96">huella de 1 cajón</text>
+          <line x1="196" y1="82" x2="196" y2="376" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="82" x2="202" y2="82" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="376" x2="202" y2="376" stroke="#F2B01D" stroke-width="1"/>
+          <text x="208" y="217" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">niveles</text>
+          <text x="208" y="231" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">según</text>
+          <text x="208" y="245" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">proyecto</text>
+        </g>
+      </svg>
+    </div>
+    <p class="draw-note">Esquema de principio · la altura libre, la capacidad y el número de niveles se calculan sobre el espacio real de cada proyecto</p>
+  </div>
+</section>
+
+<!-- ===================== QUIÉNES SOMOS ===================== -->
+<section id="nosotros">
+  <div class="wrap two">
+    <div>
+      <p class="tag">30 años de experiencia</p>
+      <h2 class="sign" style="font-size:clamp(1.8rem,4vw,2.5rem);margin-block:.9rem 1.2rem">Ingeniería que da confianza</h2>
+      <div class="stack" style="gap:1em">
+        <p class="lede">Somos una empresa dedicada al análisis, desarrollo y fabricación de dispositivos electro, hidráulico y neumáticos, así como de sistemas de estacionamientos apilables.</p>
+        <p class="lede">Nuestro objetivo es brindar a nuestros clientes la plena confianza de que cada equipo está fabricado con los más altos estándares de calidad y seguridad, usando siempre los mejores materiales y apoyándonos en marcas reconocidas a nivel mundial.</p>
+        <p class="lede">Nos especializamos en detectar y analizar causas y fallas, por mínimas que parezcan, para sugerir soluciones prácticas dentro de una cultura de mejora continua.</p>
+      </div>
+    </div>
+    <div class="flow" style="grid-template-columns:1fr">
+      <div class="phase"><b>Problema</b><p>Faltan cajones de estacionamiento, no hay seguridad para las unidades de tus clientes o empleados, y el espacio de tu hogar o negocio está desaprovechado.</p></div>
+      <div class="phase"><b>Solución</b><p>Diseño, fabricación e instalación propia de cada sistema, con especificaciones a la medida de tu espacio y de tu presupuesto.</p></div>
+      <div class="phase"><b>Respaldo</b><p>30 años de experiencia en electro, hidráulica y neumática aplicados a estacionamientos apilables, con mejora continua en cada proyecto.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= ALCANCE / CALIFICACIÓN =================
-     Las cuatro líneas de "Lo que no hacemos" son declaraciones de política
-     comercial: confirmar con el cliente antes de publicar. Son las que
-     filtran el tráfico de usado, renta, DWG, escolar, cursos y reparación. -->
-<section id="alcance">
+<!-- ===================== ALCANCE =====================
+     Las cuatro líneas de "Lo que no hacemos" son declaraciones de
+     política comercial: confirmar con el cliente antes de publicar.
+     Son las que filtran el tráfico de usado, renta, DWG, escolar,
+     cursos y reparación. -->
+<section class="deepest" id="alcance">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Antes de que nos escribas</p>
+    <div class="head">
+      <p class="tag q">Antes de que nos escribas</p>
       <h2>Qué fabricamos y qué no</h2>
-      <p class="lead">Preferimos decirlo desde el principio: así no pierdes tu tiempo ni el nuestro, y la cotización que recibes es real.</p>
+      <p class="lede">Preferimos decirlo desde el principio: así no pierdes tu tiempo ni el nuestro, y la cotización que recibes es real.</p>
     </div>
-    <div class="scope">
-      <div class="yes">
+    <div class="two">
+      <div class="si">
         <h3>Lo que sí hacemos</h3>
-        <ul class="checks">
+        <ul class="pts">
           <li><b>Equipo nuevo de fabricación propia.</b> Elevadores de autos para estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado, rampas hidráulicas para autos y elevadores de autos para taller mecánico.</li>
           <li><b>Proyectos a medida.</b> Cada sistema se calcula sobre tus medidas reales: condominios, plazas comerciales, desarrolladores, flotillas y talleres mecánicos.</li>
           <li><b>Precio cerrado en menos de 24 horas hábiles.</b> No cotizamos por rangos: te damos el número del sistema que resuelve tu espacio.</li>
@@ -400,7 +493,7 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
       </div>
       <div class="no">
         <h3>Lo que no hacemos</h3>
-        <ul class="crosses">
+        <ul class="nos">
           <li><b>No vendemos elevadores usados ni de segunda mano</b>, y no damos equipo en renta. Todo lo que entregamos se fabrica nuevo para tu proyecto.</li>
           <li><b>No distribuimos planos en DWG ni AutoCAD</b>, ni material para tesis o proyectos escolares.</li>
           <li><b>No impartimos cursos</b> ni publicamos vacantes en este sitio.</li>
@@ -411,261 +504,248 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
   </div>
 </section>
 
-<!-- ================= 1. ELEVADORES PARA CARRO ================= -->
-<section class="alt" id="elevadores-carro">
+<!-- ===================== 1 · ELEVADORES PARA CARRO ===================== -->
+<section id="elevadores-carro">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Montacoches y elevación vertical</p>
+    <div class="head">
+      <p class="tag">Montacoches y elevación vertical</p>
       <h2>Elevadores para carro y montacoches hidráulico para garaje</h2>
-      <p class="lead">Un montacoches hidráulico para garaje sube tu auto al nivel que necesitas sin rampa, sin obra mayor y sin sacrificar metros de construcción. Fabricamos el elevador para automóvil sobre el hueco que ya existe en tu casa, tu edificio o tu nave industrial.</p>
+      <p class="lede">Un montacoches hidráulico para garaje sube tu auto al nivel que necesitas sin rampa, sin obra mayor y sin sacrificar metros de construcción. Fabricamos el elevador para automóvil sobre el hueco que ya existe en tu casa, tu edificio o tu nave industrial.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-body">
-          <h3>Elevador para automóvil residencial, comercial e industrial</h3>
-          <p>Elevadores para carro en hogares, edificios, hospitales y crematorios. También para personas con capacidades diferentes y para carga. Te asesoramos en cimentación y montaje.</p>
-        </div>
-        <div class="shot"><img src="assets/elev_resid.jpg" alt="Elevador para automóvil de uso residencial, comercial e industrial fabricado por Grupo DYS" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Elevador de autos subterráneo SUBTERRA</h3>
-          <p>El elevador de carro que desaparece: guarda el vehículo bajo nivel y deja la superficie libre. Máxima seguridad y cero impacto visual en cocheras y residencias.</p>
-        </div>
-        <div class="shot"><img src="assets/subterraneo.jpg" alt="Elevador de carro subterráneo SUBTERRA que oculta el vehículo bajo nivel" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Montacoches hidráulico para garaje y cochera</h3>
-          <p>Para cocheras de altura libre limitada donde una rampa no cabe. Tecnología electro-hidráulica de 2 HP con triple seguridad: eléctrica, hidráulica y mecánica.</p>
-        </div>
-        <div class="shot"><img src="assets/dup_dep.jpg" alt="Montacoches hidráulico para garaje elevando un automóvil en una cochera" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
+    <div class="feat">
+      <figure class="sheet" style="margin:0">
+        <img src="assets/elev_resid.jpg" alt="Elevador para automóvil de uso residencial, comercial e industrial fabricado por Grupo DYS" loading="lazy">
+        <figcaption>Elevación residencial, comercial e industrial</figcaption>
+      </figure>
+      <div>
+        <h3>Elevador para automóvil residencial, comercial e industrial</h3>
+        <p>Elevadores para carro en hogares, edificios, hospitales y crematorios. También para personas con capacidades diferentes y para carga. Te asesoramos en cimentación y montaje.</p>
+        <ul class="pts">
+          <li><b>Sin obra mayor.</b> Se calcula sobre la cimentación existente; te asesoramos si hace falta refuerzo.</li>
+          <li><b>Altura a medida.</b> El recorrido se define por tu espacio, no por un catálogo cerrado.</li>
+          <li><b>Operación segura.</b> Bloqueos mecánicos independientes del sistema hidráulico.</li>
+        </ul>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar mi elevador</a></p>
+      </div>
     </div>
 
-    <ul class="checks">
-      <li><b>Sin obra mayor.</b> Se calcula sobre la cimentación existente; te asesoramos si hace falta refuerzo.</li>
-      <li><b>Altura a medida.</b> El recorrido se define por tu espacio, no por un catálogo cerrado.</li>
-      <li><b>Operación segura.</b> Bloqueos mecánicos independientes del sistema hidráulico.</li>
-    </ul>
-
-    <p style="margin-top:2rem"><a class="btn btn-red" href="#cotizar">Cotizar mi elevador</a></p>
+    <div class="vars">
+      <article class="var">
+        <h3>Elevador de autos subterráneo SUBTERRA</h3>
+        <p>El elevador de carro que desaparece: guarda el vehículo bajo nivel y deja la superficie libre. Máxima seguridad y cero impacto visual en cocheras y residencias.</p>
+        <figure class="sheet var-shot"><img src="assets/subterraneo.jpg" alt="Elevador de autos subterráneo SUBTERRA que oculta el vehículo bajo nivel" loading="lazy"></figure>
+      </article>
+      <article class="var">
+        <h3>Montacoches hidráulico para garaje y cochera</h3>
+        <p>Para cocheras de altura libre limitada donde una rampa no cabe. Tecnología electro-hidráulica de 2 HP con triple seguridad: eléctrica, hidráulica y mecánica.</p>
+        <figure class="sheet var-shot"><img src="assets/dup_dep.jpg" alt="Montacoches hidráulico para garaje elevando un automóvil en una cochera" loading="lazy"></figure>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ================= 2. ELEVADORES PARA ESTACIONAMIENTO ================= -->
-<section id="estacionamiento">
+<!-- ===================== 2 · ESTACIONAMIENTO ===================== -->
+<section class="deep" id="estacionamiento">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Duplicadores y estacionamiento automatizado</p>
+    <div class="head">
+      <p class="tag">Duplicadores y estacionamiento automatizado</p>
       <h2>Elevadores de autos para estacionamiento: duplica tus cajones</h2>
-      <p class="lead">Dos autos en el espacio de uno. El duplicador de estacionamiento es la forma más rápida y económica de resolver la falta de cajones en un condominio, una plaza comercial o una cochera — y se instala sobre el cajón que ya tienes, sin ampliar la losa.</p>
+      <p class="lede">Dos autos en el espacio de uno. El duplicador de estacionamiento es la forma más rápida y económica de resolver la falta de cajones en un condominio, una plaza comercial o una cochera — y se instala sobre el cajón que ya tienes, sin ampliar la losa.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-body">
-          <h3>Duplicador de estacionamiento con dependencia</h3>
-          <p>Dos autos por cajón: se mueve el de abajo para sacar el de arriba. La opción más compacta y económica para multiplicar lugares de inmediato.</p>
-        </div>
-        <div class="shot"><img src="assets/dup_dep.jpg" alt="Duplicador de estacionamiento con dependencia: dos autos en un solo cajón" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Duplicador de estacionamiento sin dependencia</h3>
-          <p>Cada auto entra y sale por su cuenta, sin mover al otro. Ideal cuando ambos cajones se usan con horarios distintos, en oficinas y renta.</p>
-        </div>
-        <div class="shot"><img src="assets/dup_indep.jpg" alt="Duplicador de estacionamiento sin dependencia: cada auto entra y sale sin mover al otro" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Rampas apilacoches para estacionamiento</h3>
-          <p>Sistemas de apilación y ahorradores de espacio, dependientes o no dependientes, para casa, negocio o flotilla completa.</p>
-        </div>
-        <div class="shot"><img src="assets/apilacoches.jpg" alt="Rampa apilacoches para estacionamiento con dos autos apilados" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-    </div>
-
-    <div class="split" style="margin-top:clamp(2.5rem,6vw,4rem)">
+    <div class="feat">
       <div>
-        <p class="eyebrow">Sistema Drone</p>
-        <h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Sistema de estacionamiento automatizado para autos compactos</h2>
-        <p class="lead" style="margin-top:1.1rem">Sistema de estacionamiento automatizado para restaurantes, escuelas, universidades, centros comerciales y más. Pensado para autos compactos, subcompactos y SUV's.</p>
-        <dl class="spec">
+        <h3>Duplicador de estacionamiento sin dependencia</h3>
+        <p>Cada auto entra y sale por su cuenta, sin mover al otro. Es la opción correcta cuando ambos cajones se usan con horarios distintos: oficinas, renta de espacios y condominios donde nadie quiere depender del vecino para salir.</p>
+        <ul class="pts">
+          <li><b>Dos autos por cajón existente.</b> No hay que ampliar la losa ni tocar la circulación.</li>
+          <li><b>Independencia total.</b> Sin maniobras previas para sacar el vehículo de arriba.</li>
+          <li><b>Triple seguridad.</b> Eléctrica, hidráulica y mecánica, independientes entre sí.</li>
+        </ul>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Quiero duplicar mis cajones</a></p>
+      </div>
+      <figure class="sheet" style="margin:0">
+        <img src="assets/dup_indep.jpg" alt="Duplicador de estacionamiento sin dependencia: cada auto entra y sale sin mover al otro" loading="lazy">
+        <figcaption>Duplicador sin dependencia · 2 autos por cajón</figcaption>
+      </figure>
+    </div>
+
+    <div class="vars">
+      <article class="var">
+        <h3>Duplicador de estacionamiento con dependencia</h3>
+        <p>Dos autos por cajón: se mueve el de abajo para sacar el de arriba. La opción más compacta y económica para multiplicar lugares de inmediato.</p>
+        <figure class="sheet var-shot"><img src="assets/dup_dep.jpg" alt="Duplicador de estacionamiento con dependencia: dos autos en un solo cajón" loading="lazy"></figure>
+      </article>
+      <article class="var">
+        <h3>Rampas apilacoches para estacionamiento</h3>
+        <p>Sistemas de apilación y ahorradores de espacio, dependientes o no dependientes, para casa, negocio o flotilla completa.</p>
+        <figure class="sheet var-shot"><img src="assets/apilacoches.jpg" alt="Rampa apilacoches para estacionamiento con dos autos apilados" loading="lazy"></figure>
+      </article>
+    </div>
+
+    <div class="feat" style="margin-top:clamp(2.6rem,6vw,4rem)">
+      <div>
+        <p class="tag">Sistema Drone</p>
+        <h3 style="margin-block:.8rem .7rem">Sistema de estacionamiento automatizado para autos compactos</h3>
+        <p>Sistema de estacionamiento automatizado para restaurantes, escuelas, universidades, centros comerciales y más. Pensado para autos compactos, subcompactos y SUV's.</p>
+        <dl class="data">
           <div><dt>Tecnología</dt><dd>Electro-hidráulica</dd></div>
           <div><dt>Alimentación</dt><dd>120–220 VCA · 2 HP</dd></div>
           <div><dt>Garantía</dt><dd>2 años</dd></div>
           <div><dt>Vida útil</dt><dd>15 años</dd></div>
           <div><dt>Seguridad</dt><dd>Eléctrica, hidráulica y mecánica</dd></div>
         </dl>
-        <p style="margin-top:1.8rem"><a class="btn btn-red" href="#cotizar">Cotizar sistema Drone</a></p>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar sistema Drone</a></p>
       </div>
-      <figure class="shot" style="margin:0"><img src="assets/drone_foto.jpg" alt="Sistema Drone de Grupo DYS instalado: elevadores para estacionamiento de autos compactos" loading="lazy" style="mix-blend-mode:normal;aspect-ratio:16/9;object-fit:cover"></figure>
+      <figure class="sheet photo" style="margin:0">
+        <img src="assets/drone_foto.jpg" alt="Sistema Drone de Grupo DYS instalado: elevadores para estacionamiento de autos compactos" loading="lazy">
+        <figcaption>Instalación en sitio · sistema Drone</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ================= 3. TORRES DE ESTACIONAMIENTO ================= -->
-<section class="alt" id="torres">
+<!-- ===================== 3 · TORRES ===================== -->
+<section id="torres">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Estacionamiento vertical automatizado</p>
+    <div class="head">
+      <p class="tag">Estacionamiento vertical automatizado</p>
       <h2>Torres de estacionamiento vertical automatizado para autos</h2>
-      <p class="lead">Cuando el terreno ya no da más a lo ancho, la única salida es hacia arriba. Una torre de estacionamiento automecanizada recibe, eleva y entrega cada vehículo sola: sin maniobras, sin acomodador y sin pasillos de circulación que desperdician metros.</p>
+      <p class="lede">Cuando el terreno ya no da más a lo ancho, la única salida es hacia arriba. Una torre de estacionamiento automecanizada recibe, eleva y entrega cada vehículo sola: sin maniobras, sin acomodador y sin pasillos de circulación que desperdician metros.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-body">
-          <h3>Torre de estacionamiento inteligente multiniveles</h3>
-          <p>Proyectos personalizados para alto flujo vehicular. Montaje en sitio y diseño estructural, con cimentación incluida en la asesoría técnica.</p>
-        </div>
-        <div class="shot"><img src="assets/torres_multi.jpg" alt="Torre de estacionamiento vertical inteligente multiniveles para autos" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Estacionamiento vertical para autos automecanizado</h3>
-          <p>Recibe, eleva y entrega cada vehículo de forma automecanizada, dando máxima seguridad a las unidades de tus clientes.</p>
-        </div>
-        <div class="shot"><img src="assets/torres_auto.jpg" alt="Estacionamiento vertical automecanizado: torre de estacionamiento con varios niveles de autos" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Almacenamiento y estacionamiento vertical industrial</h3>
-          <p>La misma lógica aplicada a inventario y unidades en resguardo: aprovecha la altura libre de tu nave en lugar de rentar más piso.</p>
-        </div>
-        <div class="shot"><img src="assets/subterraneo.jpg" alt="Sistema de almacenamiento y estacionamiento vertical de vehículos" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
+    <div class="feat">
+      <figure class="sheet" style="margin:0">
+        <img src="assets/torres_auto.jpg" alt="Estacionamiento vertical automecanizado: torre de estacionamiento con varios niveles de autos" loading="lazy">
+        <figcaption>Torre automecanizada · niveles según proyecto</figcaption>
+      </figure>
+      <div>
+        <h3>Estacionamiento vertical para autos automecanizado</h3>
+        <p>Recibe, eleva y entrega cada vehículo de forma automecanizada, dando máxima seguridad a las unidades de tus clientes.</p>
+        <ul class="pts">
+          <li><b>Más cajones por m².</b> La torre elimina rampas y pasillos: todo el espacio se convierte en lugares.</li>
+          <li><b>Cero maniobras del usuario.</b> El conductor deja el auto en la bahía; el sistema hace el resto.</li>
+          <li><b>Seguridad real.</b> Nadie accede a los vehículos guardados: ni golpes, ni robos, ni llaves en resguardo.</li>
+          <li><b>Proyecto llave en mano.</b> Cálculo estructural, fabricación, montaje en sitio y puesta en marcha.</li>
+        </ul>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar mi torre</a></p>
+      </div>
     </div>
 
-    <ul class="checks">
-      <li><b>Más cajones por m².</b> La torre elimina rampas y pasillos: todo el espacio se convierte en lugares.</li>
-      <li><b>Cero maniobras del usuario.</b> El conductor deja el auto en la bahía; el sistema hace el resto.</li>
-      <li><b>Seguridad real.</b> Nadie accede a los vehículos guardados: ni golpes, ni robos, ni llaves en resguardo.</li>
-      <li><b>Proyecto llave en mano.</b> Cálculo estructural, fabricación, montaje en sitio y puesta en marcha.</li>
-    </ul>
-
-    <p style="margin-top:2rem"><a class="btn btn-red" href="#cotizar">Cotizar mi torre</a></p>
+    <div class="vars">
+      <article class="var">
+        <h3>Torre de estacionamiento inteligente multiniveles</h3>
+        <p>Proyectos personalizados para alto flujo vehicular. Montaje en sitio y diseño estructural, con cimentación incluida en la asesoría técnica.</p>
+        <figure class="sheet var-shot"><img src="assets/torres_multi.jpg" alt="Torre de estacionamiento vertical inteligente multiniveles para autos" loading="lazy"></figure>
+      </article>
+      <article class="var">
+        <h3>Almacenamiento y estacionamiento vertical industrial</h3>
+        <p>La misma lógica aplicada a inventario y unidades en resguardo: aprovecha la altura libre de tu nave en lugar de rentar más piso.</p>
+        <figure class="sheet var-shot"><img src="assets/subterraneo.jpg" alt="Sistema de almacenamiento y estacionamiento vertical de vehículos" loading="lazy"></figure>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ================= 4. ELEVADORES Y RAMPAS ================= -->
-<section id="rampas">
+<!-- ===================== 4 · RAMPAS ===================== -->
+<section class="deep" id="rampas">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Rampas hidráulicas y plataformas</p>
+    <div class="head">
+      <p class="tag">Rampas hidráulicas y plataformas</p>
       <h2>Elevadores y rampas hidráulicas para autos</h2>
-      <p class="lead">La misma ingeniería hidráulica, en tres escalas: la rampa apilacoches que suma un cajón en casa, la plataforma de tijera que mueve carga pesada en planta, y la rampa automotriz especial que se calcula para tu maniobra concreta.</p>
+      <p class="lede">La misma ingeniería hidráulica, en tres escalas: la rampa apilacoches que suma un cajón en casa, la plataforma de tijera que mueve carga pesada en planta, y la rampa automotriz especial que se calcula para tu maniobra concreta.</p>
     </div>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-body">
-          <h3>Rampa industrial de tijera para carga y maniobra</h3>
-          <p>Plataformas de tijera para trabajo pesado: carga, maniobra y posicionamiento de vehículos y equipo dentro de planta.</p>
-        </div>
-        <div class="shot"><img src="assets/rampa_ind.jpg" alt="Rampa hidráulica industrial de tijera para carga y maniobra de vehículos" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Rampa hidráulica para autos residencial</h3>
-          <p>La rampa hidráulica para autos más directa: un cajón extra en tu cochera, montada en el espacio que ya tienes.</p>
-        </div>
-        <div class="shot"><img src="assets/apilacoches.jpg" alt="Rampa hidráulica apilacoches para autos en cochera residencial" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
-
-      <article class="card">
-        <div class="card-body">
-          <h3>Rampa automotriz de gran formato y unidades pesadas</h3>
-          <p>Elevación para unidades largas y pesadas — autobuses, camiones y equipo especial — con estructura calculada para tu carga real.</p>
-        </div>
-        <div class="shot"><img src="assets/rampa_taller.jpg" alt="Rampa elevadora de gran formato para autobuses y unidades pesadas" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
-      </article>
+    <div class="feat">
+      <div>
+        <h3>Rampa industrial de tijera para carga y maniobra</h3>
+        <p>Plataformas de tijera para trabajo pesado: carga, maniobra y posicionamiento de vehículos y equipo dentro de planta. La estructura se calcula sobre la carga real que vas a mover, no sobre un valor de catálogo.</p>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Ver rampas y capacidades</a></p>
+      </div>
+      <figure class="sheet" style="margin:0">
+        <img src="assets/rampa_ind.jpg" alt="Rampa hidráulica industrial de tijera para carga y maniobra de vehículos" loading="lazy">
+        <figcaption>Plataforma de tijera · carga y maniobra en planta</figcaption>
+      </figure>
     </div>
 
-    <p style="margin-top:2rem"><a class="btn btn-red" href="#cotizar">Ver rampas y capacidades</a></p>
-  </div>
-</section>
-
-<!-- ================= 5. TALLER MECÁNICO ================= -->
-<section class="alt" id="taller">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">Equipamiento para taller mecánico</p>
-      <h2 style="font-size:clamp(1.85rem,4.2vw,2.9rem)">Elevadores de autos para taller mecánico</h2>
-      <p class="lead" style="margin-top:1.2rem">Un elevador de autos para taller mecánico no se compra por el precio de lista: se compra por las horas que no se detiene. Fabricamos elevadores de carros para taller con capacidad calculada sobre las unidades que realmente atiendes.</p>
-      <ul class="checks">
-        <li><b>Elevador hidráulico para taller.</b> Acceso completo a bajos, suspensión y escape sin posturas forzadas.</li>
-        <li><b>Elevador de tijera para taller.</b> Cuando necesitas liberar el piso entre servicio y servicio.</li>
-        <li><b>Capacidad a tu parque vehicular.</b> Se calcula para lo que realmente entra a tu taller, de compacto a unidad pesada.</li>
-        <li><b>Triple bloqueo de seguridad.</b> Eléctrico, hidráulico y mecánico, independientes entre sí.</li>
-        <li><b>Refacciones y servicio en México.</b> Fabricamos aquí: no dependes de importación para una pieza.</li>
-      </ul>
-      <p style="margin-top:2rem"><a class="btn btn-red" href="#cotizar">Cotizar elevador de taller</a></p>
-    </div>
-    <div>
-      <article class="card">
-        <div class="card-body">
-          <h3>Rampa y elevador de carros para taller mecánico</h3>
-          <p>Elevación de servicio para trabajar bajo el vehículo con seguridad y aprovechar mejor el espacio de tu taller. Fabricación a medida según la unidad que atiendes.</p>
-        </div>
-        <div class="shot"><img src="assets/rampa_taller.jpg" alt="Elevador de autos para taller mecánico elevando una unidad de gran formato" loading="lazy"></div>
-        <div class="card-foot"><a class="more" href="#cotizar">Cotizar <span aria-hidden="true">→</span></a></div>
+    <div class="vars">
+      <article class="var">
+        <h3>Rampa hidráulica para autos residencial</h3>
+        <p>La rampa hidráulica para autos más directa: un cajón extra en tu cochera, montada en el espacio que ya tienes.</p>
+        <figure class="sheet var-shot"><img src="assets/apilacoches.jpg" alt="Rampa hidráulica apilacoches para autos en cochera residencial" loading="lazy"></figure>
       </article>
-      <dl class="spec">
-        <div><dt>Tecnología</dt><dd>Electro-hidráulica</dd></div>
-        <div><dt>Alimentación</dt><dd>120–220 VCA</dd></div>
-        <div><dt>Seguridad</dt><dd>Eléctrica, hidráulica y mecánica</dd></div>
-        <div><dt>Fabricación</dt><dd>Propia, en México</dd></div>
-      </dl>
+      <article class="var">
+        <h3>Rampa automotriz de gran formato y unidades pesadas</h3>
+        <p>Elevación para unidades largas y pesadas — autobuses, camiones y equipo especial — con estructura calculada para tu carga real.</p>
+        <figure class="sheet var-shot"><img src="assets/rampa_taller.jpg" alt="Rampa elevadora de gran formato para autobuses y unidades pesadas" loading="lazy"></figure>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= PROCESO ================= -->
-<section id="proceso">
+<!-- ===================== 5 · TALLER MECÁNICO ===================== -->
+<section id="taller">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Cómo trabajamos</p>
+    <div class="head">
+      <p class="tag">Equipamiento para taller mecánico</p>
+      <h2>Elevadores de autos para taller mecánico</h2>
+      <p class="lede">Un elevador de autos para taller mecánico no se compra por el precio de lista: se compra por las horas que no se detiene. Fabricamos elevadores de carros para taller con capacidad calculada sobre las unidades que realmente atiendes.</p>
+    </div>
+
+    <div class="feat">
+      <div>
+        <h3>Rampa y elevador de carros para taller mecánico</h3>
+        <p>Elevación de servicio para trabajar bajo el vehículo con seguridad y aprovechar mejor el espacio de tu taller. Fabricación a medida según la unidad que atiendes.</p>
+        <ul class="pts">
+          <li><b>Elevador hidráulico para taller.</b> Acceso completo a bajos, suspensión y escape sin posturas forzadas.</li>
+          <li><b>Elevador de tijera para taller.</b> Cuando necesitas liberar el piso entre servicio y servicio.</li>
+          <li><b>Capacidad a tu parque vehicular.</b> Se calcula para lo que realmente entra a tu taller, de compacto a unidad pesada.</li>
+          <li><b>Triple bloqueo de seguridad.</b> Eléctrico, hidráulico y mecánico, independientes entre sí.</li>
+          <li><b>Refacciones y servicio en México.</b> Fabricamos aquí: no dependes de importación para una pieza.</li>
+        </ul>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar elevador de taller</a></p>
+      </div>
+      <div>
+        <figure class="sheet" style="margin:0">
+          <img src="assets/rampa_taller.jpg" alt="Elevador de autos para taller mecánico elevando una unidad de gran formato" loading="lazy">
+          <figcaption>Elevación de servicio · unidad de gran formato</figcaption>
+        </figure>
+        <dl class="data">
+          <div><dt>Tecnología</dt><dd>Electro-hidráulica</dd></div>
+          <div><dt>Alimentación</dt><dd>120–220 VCA</dd></div>
+          <div><dt>Seguridad</dt><dd>Eléctrica, hidráulica y mecánica</dd></div>
+          <div><dt>Fabricación</dt><dd>Propia, en México</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESO ===================== -->
+<section class="deep" id="proceso">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag">Cómo trabajamos</p>
       <h2>De la medida de tu espacio al sistema funcionando</h2>
     </div>
-    <div class="steps" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));display:grid;gap:2rem">
-      <div class="step"><b>01</b><div><h3>Cuéntanos tu espacio</h3><p>Largo, ancho y altura libre, cuántos autos y de qué tipo. Una foto basta para empezar.</p></div></div>
-      <div class="step"><b>02</b><div><h3>Propuesta en &lt;24 h</h3><p>Sistema recomendado, capacidad, dimensiones finales y precio, en menos de 24 horas hábiles.</p></div></div>
-      <div class="step"><b>03</b><div><h3>Fabricación a medida</h3><p>Se fabrica en nuestra planta de San Juan del Río con materiales de marcas reconocidas a nivel mundial.</p></div></div>
-      <div class="step"><b>04</b><div><h3>Instalación y entrega</h3><p>Montaje en sitio, pruebas de carga, capacitación de uso y arranque de garantía.</p></div></div>
+    <div class="flow">
+      <div class="phase"><b class="num">01</b><h3>Cuéntanos tu espacio</h3><p>Largo, ancho y altura libre, cuántos autos y de qué tipo. Una foto basta para empezar.</p></div>
+      <div class="phase"><b class="num">02</b><h3>Propuesta en &lt;24 h</h3><p>Sistema recomendado, capacidad, dimensiones finales y precio, en menos de 24 horas hábiles.</p></div>
+      <div class="phase"><b class="num">03</b><h3>Fabricación a medida</h3><p>Se fabrica en nuestra planta de San Juan del Río con materiales de marcas reconocidas a nivel mundial.</p></div>
+      <div class="phase"><b class="num">04</b><h3>Instalación y entrega</h3><p>Montaje en sitio, pruebas de carga, capacitación de uso y arranque de garantía.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
-<section class="alt" id="faq">
+<!-- ===================== PREGUNTAS ===================== -->
+<section id="faq">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Lo que más nos preguntan antes de cotizar</p>
+    <div class="head">
+      <p class="tag">Lo que más nos preguntan antes de cotizar</p>
       <h2>Preguntas frecuentes</h2>
     </div>
-    <div class="faq">
+    <div class="qs">
       <details open>
         <summary>¿Cuánto tardan en responder una cotización?</summary>
         <p>Respondemos en menos de 24 horas hábiles a cada solicitud, con una propuesta concreta para tu espacio.</p>
@@ -694,14 +774,14 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
   </div>
 </section>
 
-<!-- ================= CONTACTO ================= -->
-<section class="contact" id="cotizar">
-  <div class="wrap contact-grid">
+<!-- ===================== CONTACTO ===================== -->
+<section class="deepest" id="cotizar">
+  <div class="wrap reach">
     <div>
-      <p class="eyebrow">Comienza tu proyecto hoy</p>
-      <h2>¿Te faltan cajones de estacionamiento?</h2>
-      <p class="lead" style="margin-top:1.2rem">Cuéntanos tu espacio, el producto que te interesa y cuántos autos necesitas estacionar. Te respondemos en menos de 24 horas hábiles con una propuesta, sin compromiso.</p>
-      <dl class="dl">
+      <p class="tag">Comienza tu proyecto hoy</p>
+      <h2 style="margin-block:.9rem 1.2rem">¿Te faltan cajones de estacionamiento?</h2>
+      <p class="lede">Cuéntanos tu espacio, el producto que te interesa y cuántos autos necesitas estacionar. Te respondemos en menos de 24 horas hábiles con una propuesta, sin compromiso.</p>
+      <dl class="data plain">
         <div><dt>Teléfono</dt><dd><a href="tel:+524272014408">+52 1 427 201 4408</a></dd></div>
         <div><dt>Correo</dt><dd><a href="mailto:jalvarez@grupodys.com">jalvarez@grupodys.com</a></dd></div>
         <div><dt>Horario</dt><dd>Lun–Vie · 9:00 a 18:00</dd></div>
@@ -709,7 +789,7 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
       </dl>
     </div>
 
-    <!-- TODO: sustituir action por el endpoint real (Formspree, GHL, backend propio).
+    <!-- TODO: sustituir action por el endpoint real (Formspree, backend propio).
          mailto: depende del cliente de correo del visitante y pierde leads. -->
     <form id="quoteForm" action="mailto:jalvarez@grupodys.com" method="post" enctype="text/plain">
       <div>
@@ -736,8 +816,8 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
         <label for="f-msg">Cuéntanos tu proyecto</label>
         <textarea id="f-msg" name="mensaje" placeholder="Ej.: Tengo una cochera de 6 × 3 m y necesito estacionar 2 autos."></textarea>
       </div>
-      <button class="btn btn-red btn-submit" type="submit">Solicitar cotización</button>
-      <p class="form-note">Respondemos en menos de 24 horas hábiles.</p>
+      <button class="btn btn-act sub" type="submit">Solicitar cotización</button>
+      <p class="fine">Respondemos en menos de 24 horas hábiles.</p>
     </form>
   </div>
 </section>
@@ -745,9 +825,9 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
 </main>
 
 <footer>
-  <div class="wrap foot-in">
+  <div class="wrap foot">
     <span>© <span id="y">2026</span> Grupo DYS S.A. de C.V. · iaDys — Estacionamientos verticales inteligentes</span>
-    <span>San Juan del Río, Querétaro, México</span>
+    <span class="num">San Juan del Río, Querétaro, México</span>
   </div>
 </footer>
 
@@ -758,16 +838,16 @@ footer{background:var(--navy-900);border-top:1px solid var(--line);padding:2rem 
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
 
-var nav = document.getElementById('nav'), tog = document.getElementById('navToggle');
-tog.addEventListener('click', function () {
-  var open = nav.classList.toggle('open');
-  tog.setAttribute('aria-expanded', open);
-  tog.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+var menu = document.getElementById('menu'), burger = document.getElementById('burger');
+burger.addEventListener('click', function () {
+  var on = menu.classList.toggle('on');
+  burger.setAttribute('aria-expanded', on);
+  burger.setAttribute('aria-label', on ? 'Cerrar menú' : 'Abrir menú');
 });
-nav.addEventListener('click', function (e) {
-  if (e.target.tagName === 'A') {
-    nav.classList.remove('open');
-    tog.setAttribute('aria-expanded', 'false');
+menu.addEventListener('click', function (e) {
+  if (e.target.closest('a')) {
+    menu.classList.remove('on');
+    burger.setAttribute('aria-expanded', 'false');
   }
 });
 </script>
@@ -782,7 +862,7 @@ nav.addEventListener('click', function (e) {
       "name": "Grupo DYS S.A. de C.V.",
       "alternateName": "iaDys",
       "slogan": "Estacionamientos verticales inteligentes",
-      "description": "Diseño, fabricación e instalación de elevadores para autos, duplicadores de estacionamiento, torres verticales automecanizadas y elevadores para taller mecánico.",
+      "description": "Diseño, fabricación e instalación de elevadores de autos para estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado y elevadores de autos para taller mecánico.",
       "url": "https://grupodys.com/",
       "logo": "https://grupodys.com/assets/logo-iadys.png",
       "telephone": "+52-427-201-4408",
@@ -803,11 +883,11 @@ nav.addEventListener('click', function (e) {
         "closes": "18:00"
       }],
       "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores para carro / montacoches hidráulico" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores para estacionamiento de carros (duplicadores)" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Torres de estacionamiento vertical automecanizadas" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores y rampas hidráulicas para carro" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores de carro para taller mecánico" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Montacoches hidráulico para garaje" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores de autos para estacionamiento" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Torres de estacionamiento vertical automatizado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores y rampas hidráulicas para autos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Elevadores de autos para taller mecánico" } }
       ]
     },
     {
