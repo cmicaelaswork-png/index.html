@@ -23,70 +23,41 @@
 | Triple seguridad | Eléctrica, hidráulica y mecánica |
 | Vida útil 15 años · Garantía 2 años | Especificación del sistema DRONE |
 
-**Tono:** técnico, directo, sin adjetivos huecos. Habla de cajones, toneladas, voltajes y plazos. El comprador es un desarrollador, un administrador de condominio o un dueño de taller — compara por ficha técnica, no por poesía.
+**Registro: usted.** El mercado es México y el comprador es un desarrollador, un administrador de condominio, un arquitecto o un dueño de taller. El tuteo se eliminó de toda la página: «cuéntanos tu espacio» pasó a «describa su espacio», «¿te faltan cajones?» a «¿le faltan cajones?».
+
+**Terminología: carros.** Los encabezados usan «carros», que es el término del cliente para el mercado mexicano. Las variantes «autos» y «automóvil» se conservan **dentro del cuerpo, los `alt` y el schema**, porque el estudio les asigna el mayor volumen: `elevadores para autos` tiene 1.000 búsquedas/mes y `elevador de autos para taller mecánico` 500/mes. Perderlas por completo habría costado tráfico real. La sección de tipos declara la equivalencia de forma explícita, lo que sirve al lector y recupera los tres sinónimos en una sola frase.
+
+**Tono:** técnico, directo, sin adjetivos huecos. Se habla de cajones, huella en planta, altura libre y voltajes. Se compara por ficha técnica, no por promesas.
 
 ---
 
-## 2. Mapa de secciones ↔ frases completas
+## 2. Estructura de la página
 
-**Criterio:** cada sección se titula con la frase completa que usa el comprador, no con el término corto. `elevador` atrae estudiantes, instaladores de elevadores de pasajeros y gente buscando planos; `elevador de autos para taller mecánico` solo atrae a quien va a comprar uno. La frase larga cuesta más por clic y trae menos gente — y por eso convierte.
+El H1 quedó reducido a **«Elevadores de carro»**. La explicación de tipos vive inmediatamente debajo, en un carrusel de 10 sistemas donde cada uno declara **Uso**, **Función** y **Capacidad**; después vienen las cuatro secciones de detalle.
 
-### 2.1 Elevadores para carro y montacoches hidráulico para garaje
-> `elevador para automóvil` · 1.000/mes · CPC €0,32–1,07
-> `montacoches` · 70/mes · CPC €0,64–**3,48** (el clic más caro del estudio)
-> `montacoches hidráulico`, `montacoches para garaje`, `montacoches precio` · 10/mes c/u
+### Carrusel de tipos (10 sistemas)
+Duplicador con dependencia · Duplicador sin dependencia · Rampa apilacoches · Torre de estacionamiento vertical automatizado · Torre inteligente multiniveles · Elevador subterráneo SUBTERRA · Montacoches y elevación residencial, comercial e industrial · Rampa industrial de tijera · Elevador para taller mecánico · Sistema Drone.
 
-**H2:** Elevadores para carro y montacoches hidráulico para garaje
-**H3 de tarjetas:** Elevador para automóvil residencial, comercial e industrial · Elevador de autos subterráneo SUBTERRA · Montacoches hidráulico para garaje y cochera
-**CTA:** Cotizar mi elevador
+### Secciones de detalle
 
-### 2.2 Elevadores de autos para estacionamiento
-> `elevadores para autos` · 1.000/mes · +14 % en 3 meses
-> `elevadores de autos para estacionamiento` · 70/mes · CPC €1,43 — **la más cualificada del estudio**
-> `estacionamiento automatizado` · 90/mes · `sistemas de estacionamientos automatizados` · 10/mes
+| Sección | H2 | Frases que captura |
+|---|---|---|
+| Estacionamiento | Elevadores para estacionamiento de carros | `elevadores de autos para estacionamiento` (70/mes, la más cualificada), `estacionamiento automatizado` (90/mes), `duplicador de estacionamiento` |
+| Rampas | Elevadores y rampas para autos | bloque de ≈4.400 búsquedas/mes: `rampa hidráulica para autos`, `rampa automotriz`, `elevador automotriz` |
+| Torres | Torres de estacionamiento | `torre de estacionamiento` (30/mes, +200 % interanual), `estacionamiento vertical` (70/mes), `estacionamientos verticales automatizados` |
+| Taller | Elevadores para taller mecánico | `elevador de autos para taller mecánico` (500/mes), `elevador hidráulico taller`, `elevador de tijera para taller` |
 
-**H2:** Elevadores de autos para estacionamiento: duplica tus cajones
-**H3 de tarjetas:** Duplicador de estacionamiento con dependencia · Duplicador de estacionamiento sin dependencia · Rampas apilacoches para estacionamiento
-**CTA:** Quiero duplicar mis cajones
+Cada sección de detalle cierra con un bloque **«A quién está dirigido»**, que era lo que faltaba para que el lector se reconozca antes de cotizar.
 
-### 2.3 Torres de estacionamiento vertical automatizado para autos
-> `torre de estacionamiento` · 30/mes · **+200 % interanual**
-> `estacionamiento vertical` · 70/mes · `estacionamiento vertical para autos` · 10/mes
-> `estacionamiento vertical precio` · 10/mes (competencia alta = máxima intención)
-> `estacionamientos verticales automatizados` · 10/mes
-
-**H2:** Torres de estacionamiento vertical automatizado para autos
-**H3 de tarjetas:** Torre de estacionamiento inteligente multiniveles · Estacionamiento vertical para autos automecanizado · Almacenamiento y estacionamiento vertical industrial
-**CTA:** Cotizar mi torre
-
-> La frase completa resuelve sola el problema de `la torre` y `titanium`: quien busca dónde estacionar en un edificio concreto no escribe «vertical automatizado».
-
-### 2.4 Elevadores y rampas hidráulicas para autos
-> Bloque de mayor volumen del estudio: **≈ 4.400 búsquedas/mes**, CPC $6–$21 MXN
-> `rampa hidráulica para autos`, `rampa automotriz`, `elevador automotriz` (140/mes, +27 % en 3 meses)
-
-**H2:** Elevadores y rampas hidráulicas para autos
-**H3 de tarjetas:** Rampa industrial de tijera para carga y maniobra · Rampa hidráulica para autos residencial · Rampa automotriz de gran formato y unidades pesadas
-**CTA:** Ver rampas y capacidades
-
-### 2.5 Elevadores de autos para taller mecánico
-> `elevador de autos para taller mecánico` · **500/mes** · competencia 100/100 · CPC $3,65–$15,74 MXN
-> `taller de elevadores de carros` · 500/mes · competencia **8/100** — el hueco barato del estudio
-> `elevadores para taller mecánico` · CPC $4,03–$11,04 · `elevador de carros para taller` · competencia 100
-> `elevador hidráulico taller` · `elevador de tijera para taller` · `levanta autos para taller mecánico`
-
-**H2:** Elevadores de autos para taller mecánico
-**H3 de tarjeta:** Rampa y elevador de carros para taller mecánico
-**Bullets con frase completa:** Elevador hidráulico para taller · Elevador de tijera para taller · Capacidad a tu parque vehicular
-**CTA:** Cotizar elevador de taller
+**Cobertura de «estacionamiento vertical»: 20 menciones** en la página, entre H2, texto, `alt`, rotulación del alzado y schema.
 
 ## 3. Hero
 
 **Eyebrow:** GRUPO DYS · IADYS · MÉXICO
-**H1:** Elevadores de autos para estacionamiento **y taller mecánico**
-**Sub:** Duplicadores de estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado y rampas hidráulicas para autos. Equipo nuevo de fabricación propia, calculado sobre las medidas de tu espacio.
-**CTA primario:** Cotizar mi proyecto · **CTA secundario:** Ver productos
-**Stats:** 30 años de experiencia · < 24 h respuesta a cotización · 100 % diseño a medida · 15 años de vida útil
+**H1:** Elevadores de carro
+**Sub:** Diseño, fabricación e instalación de elevadores para carros en toda la República Mexicana: duplicadores de estacionamiento, estacionamiento vertical automatizado, torres de estacionamiento, montacoches hidráulicos, rampas para autos y elevadores para taller mecánico. Cada equipo se calcula sobre las medidas reales del espacio del cliente.
+**CTA:** Solicitar cotización · Ver tipos de elevadores
+**Cifras:** 30 años · <24 h · 15 años de vida útil · 2 años de garantía
 
 ## 4. Problema / Solución / Respaldo
 
@@ -146,12 +117,13 @@
 
 ## 9. SEO
 
-**Title (74 car.):** Elevadores de autos para estacionamiento y taller mecánico | Grupo DYS
-**Meta description (152 car.):** Elevadores de autos para estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical y elevadores de autos para taller mecánico.
-**H1 único:** Elevadores de autos para estacionamiento y taller mecánico
+**Title:** Elevadores para carros y estacionamiento vertical | Grupo DYS
+**Meta description:** Fabricación de elevadores para carros en México: duplicadores de estacionamiento, estacionamiento vertical automatizado, torres de estacionamiento, montacoches, rampas hidráulicas y elevadores para taller mecánico.
+**H1 único:** Elevadores de carro
+**Pregunta de sección:** ¿No tiene espacio para guardar más carros?
 **Schema:** Organization + LocalBusiness + FAQPage
 
-Todos los H2, H3, `alt` de imagen y opciones del selector del formulario llevan la frase completa, no el término corto. El `alt` es el que más se descuidaba: «elevador» pasó a «elevador de autos para taller mecánico elevando una unidad de gran formato».
+Recuento de términos en la página: estacionamiento vertical **20** · taller mecánico **16** · montacoches **14** · torre de estacionamiento **11** · duplicador de estacionamiento **9** · rampa hidráulica **8** · elevadores para carros **7** · estacionamiento automatizado **5**.
 
 ---
 
