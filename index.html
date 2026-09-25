@@ -219,7 +219,7 @@ section{padding-block:clamp(3.2rem,7vw,5rem);border-top:1px solid var(--rule)}
 
 /* ---------- alzado ---------- */
 .draw{margin-top:clamp(1.6rem,4vw,2.4rem);overflow-x:auto}
-.draw svg{display:block;min-width:660px;width:100%;height:auto}
+.draw svg{display:block;min-width:1080px;width:100%;height:auto}
 .draw-note{margin-top:1.1rem;font-family:var(--data);font-size:.68rem;letter-spacing:.1em;
   text-transform:uppercase;color:var(--ink-4)}
 
@@ -572,7 +572,7 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
         <div class="svc-img"><img src="assets/elev_resid.jpg" alt="Montacoches hidráulico residencial, comercial e industrial" loading="lazy"></div>
         <div class="svc-txt"><h3>Montacoches hidráulico</h3><p>Traslada el vehículo entre niveles sin rampa, en viviendas, edificios, hospitales y naves industriales.</p><span class="more">Ver sistema</span></div>
       </a>
-      <a class="svc" href="#tipos">
+      <a class="svc" href="#subterraneo">
         <div class="svc-img"><img src="assets/subterraneo.jpg" alt="Elevador de carro subterráneo SUBTERRA" loading="lazy"></div>
         <div class="svc-txt"><h3>Sistema subterráneo SUBTERRA</h3><p>Resguarda el vehículo bajo nivel y deja la superficie libre, sin impacto visual en cocheras y residencias.</p><span class="more">Ver sistema</span></div>
       </a>
@@ -773,13 +773,13 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
     <div class="head">
       <p class="tag">Alzado comparativo</p>
       <h2>¿No tiene espacio para guardar más carros?</h2>
-      <p class="lede">La huella en planta no cambia; lo que cambia es cuántas veces se aprovecha en vertical. Este es el criterio técnico con el que se determina el sistema antes de discutir presupuesto.</p>
+      <p class="lede">La huella en planta no cambia; lo que cambia es cuántas veces se aprovecha en vertical, hacia arriba o hacia abajo. Este es el criterio técnico con el que se determina el sistema antes de discutir presupuesto.</p>
     </div>
 
     <div class="draw">
-      <svg viewBox="0 0 960 430" role="img" aria-labelledby="dt dd">
-        <title id="dt">Alzado comparativo de tres sistemas de estacionamiento</title>
-        <desc id="dd">Sobre la misma huella de un cajón: un cajón sencillo aloja un carro, un duplicador aloja dos carros apilados, y una torre de estacionamiento vertical aloja cuatro o más carros en niveles sucesivos.</desc>
+      <svg viewBox="0 0 1270 510" role="img" aria-labelledby="dt dd">
+        <title id="dt">Alzado comparativo de cuatro sistemas de estacionamiento</title>
+        <desc id="dd">Sobre la misma huella de un cajón: un cajón sencillo aloja un carro; un duplicador aloja dos carros apilados; una torre de estacionamiento vertical aloja cuatro o más carros en niveles sucesivos; y el sistema subterráneo aloja el carro por debajo del nivel de piso, dejando la superficie completamente libre.</desc>
         <defs>
           <g id="auto">
             <rect x="2" y="20" width="116" height="14" rx="4" fill="#C3CEE8"/>
@@ -849,9 +849,32 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
           <text x="208" y="231" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">según</text>
           <text x="208" y="245" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">proyecto</text>
         </g>
+
+        <!-- el unico que crece hacia abajo: cruza la linea de suelo -->
+        <g transform="translate(960 0)">
+          <text x="0" y="26" font-family="'IBM Plex Mono',monospace" font-size="13" font-weight="600" fill="#F2B01D" letter-spacing="2">SUBTERRÁNEO</text>
+          <text x="0" y="46" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#8E9CC4">1 carro · superficie libre</text>
+          <text x="80" y="352" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#5D6B96">nada en superficie</text>
+          <rect x="0" y="376" width="160" height="76" fill="#080F39" stroke="#16255E" stroke-width="2" stroke-dasharray="5 4"/>
+          <use href="#auto" x="20" y="382"/>
+          <use href="#plat" x="16" y="425"/>
+          <line x1="0" y1="376" x2="160" y2="376" stroke="#5D6B96" stroke-width="2"/>
+          <rect x="-2" y="369" width="164" height="6" rx="1" fill="#F2B01D"/>
+          <line x1="196" y1="376" x2="196" y2="452" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="376" x2="202" y2="376" stroke="#F2B01D" stroke-width="1"/>
+          <line x1="190" y1="452" x2="202" y2="452" stroke="#F2B01D" stroke-width="1"/>
+          <text x="208" y="404" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">bajo nivel</text>
+          <text x="208" y="418" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">de piso</text>
+          <text x="208" y="432" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">según</text>
+          <text x="208" y="446" font-family="'IBM Plex Mono',monospace" font-size="11" fill="#F2B01D">proyecto</text>
+          <line x1="0" y1="466" x2="160" y2="466" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="0" y1="460" x2="0" y2="472" stroke="#5D6B96" stroke-width="1"/>
+          <line x1="160" y1="460" x2="160" y2="472" stroke="#5D6B96" stroke-width="1"/>
+          <text x="80" y="492" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="12" fill="#5D6B96">huella de 1 cajón</text>
+        </g>
       </svg>
     </div>
-    <p class="draw-note">Esquema de principio · la altura libre, la capacidad y el número de niveles se calculan sobre el espacio real de cada proyecto</p>
+    <p class="draw-note">Esquema de principio · la altura libre, la profundidad del foso, la capacidad y el número de niveles se calculan sobre el espacio real de cada proyecto</p>
   </div>
 </section>
 
@@ -891,11 +914,6 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
         <h3>Rampa apilacoches para estacionamiento</h3>
         <p>Sistemas de apilación y ahorro de espacio, dependientes o no dependientes, para casa, negocio o flotilla completa.</p>
         <figure class="sheet var-shot"><img src="assets/apilacoches.jpg" alt="Rampa apilacoches para estacionamiento de carros" loading="lazy"></figure>
-      </article>
-      <article class="var">
-        <h3>Sistema subterráneo SUBTERRA</h3>
-        <p>Resguarda el vehículo bajo nivel y deja la superficie libre. Seguridad máxima y nulo impacto visual en cocheras y residencias.</p>
-        <figure class="sheet var-shot"><img src="assets/subterraneo.jpg" alt="Elevador de carro subterráneo SUBTERRA bajo nivel de piso" loading="lazy"></figure>
       </article>
     </div>
 
@@ -1069,6 +1087,54 @@ footer{background:var(--d-900);border-top:1px solid var(--rule);padding-block:1.
         <li><b>Agencias automotrices</b> y centros de servicio autorizado.</li>
         <li><b>Talleres de flotilla</b> con mantenimiento propio de unidades.</li>
         <li><b>Centros de verificación y hojalatería</b> que requieren elevación de servicio.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5 · SUBTERRÁNEO ===================== -->
+<section class="deep" id="subterraneo">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag">Sistema SUBTERRA</p>
+      <h2>Elevadores subterráneos para carros</h2>
+      <p class="lede">El único sistema del catálogo que no ocupa nada en superficie. En lugar de apilar los vehículos hacia arriba, el elevador subterráneo los resguarda por debajo del nivel de piso y cierra al ras, de modo que la cochera, el patio o el acceso quedan completamente libres cuando el carro está guardado.</p>
+    </div>
+
+    <div class="feat">
+      <figure class="sheet" style="margin:0">
+        <img src="assets/subterraneo.jpg" alt="Elevador subterráneo SUBTERRA para carros: el vehículo queda resguardado bajo el nivel de piso" loading="lazy">
+        <figcaption>SUBTERRA · vehículo resguardado bajo nivel</figcaption>
+      </figure>
+      <div>
+        <h3>El carro desaparece; la superficie queda libre</h3>
+        <p>La plataforma hidráulica desciende el vehículo por debajo del nivel de piso y la cubierta cierra al ras del pavimento. Es la solución indicada cuando el proyecto arquitectónico no admite una estructura visible, o cuando la superficie debe seguir usándose para otra cosa.</p>
+        <ul class="pts">
+          <li><b>Cero impacto visual.</b> Nada sobresale del piso: ni columnas, ni estructura, ni plataforma a la vista.</li>
+          <li><b>La superficie sigue siendo útil.</b> Con la cubierta cerrada, el área se ocupa como patio, acceso o zona de maniobra.</li>
+          <li><b>Resguardo real.</b> Con el vehículo abajo y la cubierta cerrada, nadie accede a él desde la superficie.</li>
+          <li><b>Profundidad por proyecto.</b> El foso se calcula sobre el nivel freático, el tipo de suelo y las dimensiones del vehículo.</li>
+          <li><b>Triple seguridad.</b> Eléctrica, hidráulica y mecánica, independientes entre sí.</li>
+        </ul>
+        <p style="margin-top:1.9rem"><a class="btn btn-act" href="#cotizar">Cotizar sistema subterráneo</a></p>
+      </div>
+    </div>
+
+    <dl class="data" style="max-width:640px">
+      <div><dt>Tecnología</dt><dd>Electro-hidráulica</dd></div>
+      <div><dt>Seguridad</dt><dd>Eléctrica, hidráulica y mecánica</dd></div>
+      <div><dt>Cubierta</dt><dd>Cierre al ras del piso</dd></div>
+      <div><dt>Profundidad y capacidad</dt><dd>Según estudio del proyecto</dd></div>
+      <div><dt>Fabricación</dt><dd>Propia, en México</dd></div>
+    </dl>
+
+    <div class="who">
+      <h4>A quién está dirigido</h4>
+      <ul>
+        <li><b>Residencias y proyectos de arquitectura</b> donde una estructura visible rompería el diseño.</li>
+        <li><b>Cocheras de frente estrecho</b> que no admiten un duplicador por altura libre.</li>
+        <li><b>Inmuebles con patio o acceso compartido</b> que debe seguir despejado.</li>
+        <li><b>Propietarios de vehículos de colección</b> que requieren resguardo fuera de la vista.</li>
       </ul>
     </div>
   </div>

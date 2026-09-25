@@ -43,7 +43,7 @@ Se aplica el esqueleto de la referencia (`ss_web_jardinesaraque`) con la identid
 | 4 | Servicios en rejilla de 6, cada uno enlaza a su sección | aplicado |
 | 5 | Carrusel de tipos (10 sistemas) | aplicado |
 | 6 | Alzado comparativo | aplicado |
-| 7 | Cuatro secciones de detalle con «A quién está dirigido» | aplicado |
+| 7 | **Cinco** secciones de detalle con «A quién está dirigido» | aplicado |
 | 8 | Quiénes somos con **distintivo de años** sobre la fotografía | aplicado |
 | 9 | Franja de **devolución de llamada** con formulario corto | aplicado |
 | 10 | Proceso en tarjetas con badge numerado, marco punteado | aplicado |
@@ -64,6 +64,7 @@ Duplicador con dependencia · Duplicador sin dependencia · Rampa apilacoches ·
 | Estacionamiento | Elevadores para estacionamiento de carros | `elevadores de autos para estacionamiento` (70/mes, la más cualificada), `estacionamiento automatizado` (90/mes), `duplicador de estacionamiento` |
 | Rampas | Elevadores y rampas para autos | bloque de ≈4.400 búsquedas/mes: `rampa hidráulica para autos`, `rampa automotriz`, `elevador automotriz` |
 | Torres | Torres de estacionamiento | `torre de estacionamiento` (30/mes, +200 % interanual), `estacionamiento vertical` (70/mes), `estacionamientos verticales automatizados` |
+| Subterráneo | Elevadores subterráneos para carros | `elevador subterráneo`, `sistema SUBTERRA`, resguardo bajo nivel de piso |
 | Taller | Elevadores para taller mecánico | `elevador de autos para taller mecánico` (500/mes), `elevador hidráulico taller`, `elevador de tijera para taller` |
 
 Cada sección de detalle cierra con un bloque **«A quién está dirigido»**, que era lo que faltaba para que el lector se reconozca antes de cotizar.
