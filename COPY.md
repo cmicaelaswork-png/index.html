@@ -27,72 +27,66 @@
 
 ---
 
-## 2. Mapa de secciones ↔ palabras clave
+## 2. Mapa de secciones ↔ frases completas
 
-Las cinco secciones solicitadas se alinean con el catálogo real y con los cinco bloques del estudio.
+**Criterio:** cada sección se titula con la frase completa que usa el comprador, no con el término corto. `elevador` atrae estudiantes, instaladores de elevadores de pasajeros y gente buscando planos; `elevador de autos para taller mecánico` solo atrae a quien va a comprar uno. La frase larga cuesta más por clic y trae menos gente — y por eso convierte.
 
-### 2.1 Elevadores para carro
+### 2.1 Elevadores para carro y montacoches hidráulico para garaje
 > `elevador para automóvil` · 1.000/mes · CPC €0,32–1,07
 > `montacoches` · 70/mes · CPC €0,64–**3,48** (el clic más caro del estudio)
-> `montacoches precio`, `montacoches hidráulico`, `montacoches para garaje` · 10/mes c/u
+> `montacoches hidráulico`, `montacoches para garaje`, `montacoches precio` · 10/mes c/u
 
-**H2:** Elevadores para carro que caben donde otros no caben
-**Lead:** Un montacoches hidráulico sube tu auto al nivel que necesitas sin rampa, sin obra mayor y sin sacrificar metros de construcción. Lo diseñamos sobre el hueco que ya existe en tu casa, tu edificio o tu nave.
+**H2:** Elevadores para carro y montacoches hidráulico para garaje
+**H3 de tarjetas:** Elevador para automóvil residencial, comercial e industrial · Elevador de autos subterráneo SUBTERRA · Montacoches hidráulico para garaje y cochera
 **CTA:** Cotizar mi elevador
 
-> **Nota de campaña:** el estudio marca `otis`, `schindler`, `thyssen` y `dwg` como negativas obligatorias. El copy evita deliberadamente comparaciones de marca para no atraer ese tráfico.
-
-### 2.2 Elevadores para estacionamiento de carros
-> `elevadores para autos` · 1.000/mes · competencia media · +14 % en 3 meses
+### 2.2 Elevadores de autos para estacionamiento
+> `elevadores para autos` · 1.000/mes · +14 % en 3 meses
 > `elevadores de autos para estacionamiento` · 70/mes · CPC €1,43 — **la más cualificada del estudio**
 > `estacionamiento automatizado` · 90/mes · `sistemas de estacionamientos automatizados` · 10/mes
 
-**H2:** Elevadores para estacionamiento: duplica tus cajones sin construir uno nuevo
-**Lead:** Dos autos en el espacio de uno. El duplicador es la forma más rápida y barata de resolver la falta de cajones en un condominio, una plaza o una cochera — y se instala en el cajón que ya tienes.
+**H2:** Elevadores de autos para estacionamiento: duplica tus cajones
+**H3 de tarjetas:** Duplicador de estacionamiento con dependencia · Duplicador de estacionamiento sin dependencia · Rampas apilacoches para estacionamiento
 **CTA:** Quiero duplicar mis cajones
 
-### 2.3 Torres de estacionamiento para carros
-> `torre de estacionamiento` · 30/mes · **+200 % interanual** · competencia baja
-> `estacionamiento vertical` · 70/mes · `estacionamiento vertical precio` · 10/mes (competencia alta = máxima intención)
+### 2.3 Torres de estacionamiento vertical automatizado para autos
+> `torre de estacionamiento` · 30/mes · **+200 % interanual**
+> `estacionamiento vertical` · 70/mes · `estacionamiento vertical para autos` · 10/mes
+> `estacionamiento vertical precio` · 10/mes (competencia alta = máxima intención)
 > `estacionamientos verticales automatizados` · 10/mes
 
-**H2:** Torres de estacionamiento: hasta 12 autos en la huella de 2
-**Lead:** Cuando el terreno ya no da más a lo ancho, la única salida es hacia arriba. Una torre automecanizada recibe, eleva y entrega cada vehículo sola, sin maniobras y sin acomodador.
+**H2:** Torres de estacionamiento vertical automatizado para autos
+**H3 de tarjetas:** Torre de estacionamiento inteligente multiniveles · Estacionamiento vertical para autos automecanizado · Almacenamiento y estacionamiento vertical industrial
 **CTA:** Cotizar mi torre
 
-> **Nota de campaña:** excluir `la torre` y `titanium` — son búsquedas de gente ubicando edificios, no compradores. Inflan el bloque de 30 a 120 búsquedas falsas.
+> La frase completa resuelve sola el problema de `la torre` y `titanium`: quien busca dónde estacionar en un edificio concreto no escribe «vertical automatizado».
 
-### 2.4 Elevadores y rampas para carro
+### 2.4 Elevadores y rampas hidráulicas para autos
 > Bloque de mayor volumen del estudio: **≈ 4.400 búsquedas/mes**, CPC $6–$21 MXN
 > `rampa hidráulica para autos`, `rampa automotriz`, `elevador automotriz` (140/mes, +27 % en 3 meses)
 
-**H2:** Elevadores y rampas para carro, de la cochera a la nave industrial
-**Lead:** La misma ingeniería hidráulica, en tres escalas: la rampa apilacoches que suma un cajón en casa, la plataforma de tijera que mueve carga pesada en planta, y la rampa especial que se calcula para tu maniobra.
+**H2:** Elevadores y rampas hidráulicas para autos
+**H3 de tarjetas:** Rampa industrial de tijera para carga y maniobra · Rampa hidráulica para autos residencial · Rampa automotriz de gran formato y unidades pesadas
 **CTA:** Ver rampas y capacidades
 
-### 2.5 Elevadores de carro para taller mecánico
+### 2.5 Elevadores de autos para taller mecánico
 > `elevador de autos para taller mecánico` · **500/mes** · competencia 100/100 · CPC $3,65–$15,74 MXN
-> `taller de elevadores de carros` · 500/mes · competencia baja (8/100) — **hueco de oportunidad**
+> `taller de elevadores de carros` · 500/mes · competencia **8/100** — el hueco barato del estudio
 > `elevadores para taller mecánico` · CPC $4,03–$11,04 · `elevador de carros para taller` · competencia 100
-> `elevador hidráulico taller`, `elevador de tijera para taller`, `levanta autos para taller mecánico`
+> `elevador hidráulico taller` · `elevador de tijera para taller` · `levanta autos para taller mecánico`
 
-**H2:** Elevadores de carro para taller mecánico que aguantan el turno completo
-**Lead:** Un elevador de taller no se compra por el precio de lista, se compra por las horas que no se detiene. Fabricamos elevación de servicio para trabajar bajo el vehículo con seguridad y recuperar el piso de tu taller.
+**H2:** Elevadores de autos para taller mecánico
+**H3 de tarjeta:** Rampa y elevador de carros para taller mecánico
+**Bullets con frase completa:** Elevador hidráulico para taller · Elevador de tijera para taller · Capacidad a tu parque vehicular
 **CTA:** Cotizar elevador de taller
-
-> **Nota de campaña:** el estudio recomienda landing separada para taller. Este bloque vive en su propia sección con ancla `#taller` para poder apuntar el Grupo B de anuncios directo ahí. Negativas: `usado`, `segunda mano`, `barato`, `renta`, `curso`, `reparación`.
-
----
 
 ## 3. Hero
 
 **Eyebrow:** GRUPO DYS · IADYS · MÉXICO
-**H1:** Elevadores y torres de estacionamiento **para carros**
-**Sub:** Duplicadores, montacoches, torres automecanizadas y rampas para taller. Diseño, fabricación e instalación propia — 30 años resolviendo la falta de cajones en México.
+**H1:** Elevadores de autos para estacionamiento **y taller mecánico**
+**Sub:** Duplicadores de estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical automatizado y rampas hidráulicas para autos. Equipo nuevo de fabricación propia, calculado sobre las medidas de tu espacio.
 **CTA primario:** Cotizar mi proyecto · **CTA secundario:** Ver productos
-**Stats:** 30 años de experiencia · < 24 h respuesta a cotización · 100 % diseño a medida
-
----
+**Stats:** 30 años de experiencia · < 24 h respuesta a cotización · 100 % diseño a medida · 15 años de vida útil
 
 ## 4. Problema / Solución / Respaldo
 
@@ -152,14 +146,33 @@ Las cinco secciones solicitadas se alinean con el catálogo real y con los cinco
 
 ## 9. SEO
 
-**Title (59 car.):** Elevadores para autos y torres de estacionamiento | Grupo DYS
-**Meta description (153 car.):** Elevadores para carro, duplicadores de estacionamiento, torres verticales automecanizadas y elevadores para taller mecánico. Fabricación propia, 30 años.
-**H1 único:** Elevadores y torres de estacionamiento para carros
-**Anclas de campaña:** `#elevadores-carro` · `#estacionamiento` · `#torres` · `#rampas` · `#taller`
+**Title (74 car.):** Elevadores de autos para estacionamiento y taller mecánico | Grupo DYS
+**Meta description (152 car.):** Elevadores de autos para estacionamiento, montacoches hidráulico para garaje, torres de estacionamiento vertical y elevadores de autos para taller mecánico.
+**H1 único:** Elevadores de autos para estacionamiento y taller mecánico
 **Schema:** Organization + LocalBusiness + FAQPage
+
+Todos los H2, H3, `alt` de imagen y opciones del selector del formulario llevan la frase completa, no el término corto. El `alt` es el que más se descuidaba: «elevador» pasó a «elevador de autos para taller mecánico elevando una unidad de gran formato».
 
 ---
 
-## 10. Lista de negativas heredada del estudio
+## 10. Cómo se filtra el tráfico basura
+
+El estudio trae una lista de negativas para Google Ads, pero una negativa solo actúa si alguien ya hizo clic en la subasta. La página tiene que hacer su parte. Por eso existe la sección **«Qué fabricamos y qué no»**, colocada antes del catálogo para que quien no encaja se vaya antes de gastar el clic:
+
+| Tráfico que sobra | Negativa en Ads | Cómo lo repele la página |
+|---|---|---|
+| Estudiantes (`buap`, `arduino`, `plc`, `tesis`) | sí | «No distribuimos planos en DWG ni AutoCAD, ni material para tesis o proyectos escolares.» |
+| Descargadores de planos (`dwg`, `autocad`) | sí | misma línea |
+| Presupuesto bajo (`usado`, `segunda mano`, `barato`, `renta`) | sí | «No vendemos elevadores usados ni de segunda mano, y no damos equipo en renta.» |
+| Empleo y formación (`empleo`, `curso`, `como hacer`) | sí | «No impartimos cursos ni publicamos vacantes en este sitio.» |
+| Servicio técnico ajeno (`reparación`) | sí | «No damos servicio ni refacciones a equipo de otras marcas.» |
+| Marcas ajenas (`otis`, `schindler`, `thyssen`) | sí | El copy no compara marcas en ningún punto. |
+| Edificios concretos (`la torre`, `titanium`) | sí | La frase completa «torre de estacionamiento vertical automatizado» no coincide con esa búsqueda. |
+
+> ⚠️ **Las cuatro líneas de «Lo que no hacemos» son declaraciones de política comercial, no datos verificados.** Están marcadas con un comentario en el HTML. Confírmalas antes de publicar: si Grupo DYS sí renta equipo o sí da servicio a otras marcas, hay que corregirlas.
+
+---
+
+## 11. Lista de negativas heredada del estudio
 
 `buap` · `arduino` · `plc` · `tesis` · `proyecto` · `dwg` · `autocad` · `plano` · `pdf gratis` · `otis` · `schindler` · `thyssen` · `la torre` · `titanium` · `usado` · `segunda mano` · `barato` · `renta` · `empleo` · `curso` · `como hacer` · `reparación`
